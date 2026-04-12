@@ -1,9 +1,8 @@
-import type { ComponentType } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wheat, GraduationCap, HeartPulse, Shield, ScrollText, Building2 } from 'lucide-react';
+import { ArrowRight, Wheat, GraduationCap, HeartPulse, Shield, ScrollText, Building2, type LucideIcon } from 'lucide-react';
 import type { Service } from '../../data/services';
 
-const iconMap: Record<string, ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   Wheat,
   GraduationCap,
   HeartPulse,
