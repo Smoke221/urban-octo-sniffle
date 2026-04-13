@@ -38,15 +38,16 @@ export default function News() {
 
       {/* Breaking news ticker */}
       <div className="bg-navy-dark border-b border-white/10 overflow-hidden">
-        <div className="flex items-center">
-          <div className="shrink-0 bg-red-600 text-white text-xs font-bold font-inter px-5 py-3.5 uppercase tracking-wider">
+        <div className="flex items-stretch">
+          <div className="shrink-0 flex items-center gap-2 bg-red-600 text-white text-xs font-bold font-poppins px-5 py-3.5 uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-white animate-pulse shrink-0" />
             BREAKING
           </div>
-          <div className="overflow-hidden flex-1 py-3 px-4">
-            <p className="ticker-animate text-gray-300 text-sm font-inter">
+          <div className="overflow-hidden flex-1 flex items-center py-3.5 px-5 border-l border-white/10">
+            <p className="ticker-animate text-gray-200 text-sm font-inter">
               {tickerItems.map((item, i) => (
                 <span key={item.id}>
-                  {i > 0 && <span className="mx-6 text-gray-600">|</span>}
+                  {i > 0 && <span className="mx-8 text-saffron/50">•</span>}
                   {item.title}
                 </span>
               ))}

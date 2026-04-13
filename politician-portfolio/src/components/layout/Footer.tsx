@@ -91,9 +91,8 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-300 text-sm font-inter hover:text-saffron transition-colors flex items-center gap-2 group"
+                    className="text-gray-300 text-sm font-inter hover:text-saffron transition-colors"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-saffron/50 group-hover:bg-saffron transition-colors" />
                     {link.label}
                   </Link>
                 </li>
@@ -111,9 +110,8 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-300 text-sm font-inter hover:text-saffron transition-colors flex items-center gap-2 group"
+                    className="text-gray-300 text-sm font-inter hover:text-saffron transition-colors"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-saffron/50 group-hover:bg-saffron transition-colors" />
                     {link.label}
                   </Link>
                 </li>

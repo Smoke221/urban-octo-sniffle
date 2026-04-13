@@ -52,9 +52,10 @@ h1, h2, h3, h4, h5, h6 {
   animation-play-state: paused;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar — global */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -62,6 +63,23 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb {
   background: #0F2C59;
   border-radius: 3px;
+}
+
+/* Timeline horizontal scroll — saffron scrollbar */
+.timeline-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+.timeline-scroll::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+}
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: #E87722;
+  border-radius: 2px;
+}
+.timeline-scroll {
+  scrollbar-color: #E87722 rgba(255,255,255,0.08);
+  scrollbar-width: thin;
 }
 
 /* INC tricolor strip */

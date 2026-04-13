@@ -21,20 +21,26 @@ interface EventCardProps {
 export default function EventCard({ event, compact = false }: EventCardProps) {
   const catColor = categoryColors[event.category] || 'bg-gray-100 text-gray-700';
 
+  const isUpcoming = event.status === 'upcoming';
+
   return (
     <div
-      className={`bg-white rounded-2xl border border-gray-100 hover:border-saffron/30 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group ${
-        event.highlight ? 'border-l-4 !border-l-saffron' : ''
-      }`}
+      className={`relative bg-white rounded-2xl overflow-hidden group transition-all duration-300
+        border border-gray-100 hover:border-saffron/20
+        shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(15,44,89,0.12)]
+        hover:-translate-y-0.5
+        ${event.highlight ? 'ring-1 ring-saffron/40' : ''}`}
     >
-      {/* Status strip */}
+      {/* Left accent bar */}
       <div
-        className={`h-1 w-full ${
-          event.status === 'upcoming' ? 'bg-saffron' : 'bg-gray-200'
+        className={`absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 ${
+          isUpcoming
+            ? 'bg-saffron group-hover:w-1.5'
+            : 'bg-gray-200 group-hover:bg-gray-300'
         }`}
       />
 
-      <div className="p-5 lg:p-6">
+      <div className="pl-5 pr-5 pt-5 pb-5 lg:pl-6 lg:pr-6 lg:pt-5 lg:pb-5">
         {/* Top row */}
         <div className="flex items-start justify-between gap-3 mb-3">
           <span
@@ -45,17 +51,17 @@ export default function EventCard({ event, compact = false }: EventCardProps) {
           </span>
           <span
             className={`text-xs font-semibold font-inter px-2.5 py-1 rounded-full ${
-              event.status === 'upcoming'
+              isUpcoming
                 ? 'bg-saffron/10 text-saffron'
                 : 'bg-gray-100 text-gray-500'
             }`}
           >
-            {event.status === 'upcoming' ? 'Upcoming' : 'Past'}
+            {isUpcoming ? 'Upcoming' : 'Past'}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="font-poppins font-bold text-base text-navy mb-2 leading-snug group-hover:text-saffron transition-colors line-clamp-2">
+        <h3 className="font-poppins font-bold text-base text-navy mb-3 leading-snug group-hover:text-saffron transition-colors line-clamp-2">
           {event.title}
         </h3>
 

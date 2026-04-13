@@ -207,16 +207,16 @@ export default function Home({
         </div>
 
         {/* News Ticker */}
-        <div className="absolute bottom-0 left-0 right-0 bg-saffron/90 backdrop-blur-sm py-2.5 overflow-hidden">
-          <div className="flex items-center gap-4">
-            <div className="shrink-0 bg-navy text-white text-xs font-bold font-inter px-4 py-1 uppercase tracking-wider z-10">
+        <div className="absolute bottom-0 left-0 right-0 bg-navy-dark/95 backdrop-blur-sm border-t border-white/10 overflow-hidden">
+          <div className="flex items-stretch">
+            <div className="shrink-0 bg-saffron text-white text-xs font-bold font-poppins px-5 py-3 uppercase tracking-widest flex items-center">
               LATEST
             </div>
-            <div className="overflow-hidden flex-1">
-              <p className="ticker-animate text-white text-sm font-inter font-medium">
+            <div className="overflow-hidden flex-1 flex items-center py-3 pl-4">
+              <p className="ticker-animate text-gray-200 text-sm font-inter">
                 {tickerItems.map((item, i) => (
                   <span key={item.id}>
-                    {i > 0 && <span className="mx-6 opacity-60">•</span>}
+                    {i > 0 && <span className="mx-8 text-saffron/60">|</span>}
                     {item.title}
                   </span>
                 ))}
@@ -376,7 +376,7 @@ export default function Home({
           <div className="hidden md:block relative mt-8">
             {/* Gold line */}
             <div className="absolute top-8 left-0 right-0 h-0.5 bg-gold/30" />
-            <div className="flex gap-0 overflow-x-auto pb-4 snap-x snap-mandatory">
+            <div className="flex gap-0 overflow-x-auto pb-4 snap-x snap-mandatory timeline-scroll">
               {achievements.map((item, idx) => (
                 <FadeInSection key={item.id} delay={idx * 0.08} className="shrink-0 w-56 snap-start">
                   <div className="relative pt-16 pr-4">
@@ -514,17 +514,18 @@ export default function Home({
       {/* ── 8. NEWS ────────────────────────────────────────────── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Red ticker strip */}
-          <div className="bg-navy rounded-xl overflow-hidden mb-10">
-            <div className="flex items-center">
-              <div className="shrink-0 bg-red-600 text-white text-xs font-bold font-inter px-4 py-3 uppercase tracking-wider">
+          {/* Breaking news ticker strip */}
+          <div className="bg-navy-dark rounded-xl overflow-hidden mb-10 border border-navy/20 shadow-sm">
+            <div className="flex items-stretch">
+              <div className="shrink-0 flex items-center gap-2 bg-red-600 text-white text-xs font-bold font-poppins px-5 py-3.5 uppercase tracking-widest">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse shrink-0" />
                 BREAKING
               </div>
-              <div className="overflow-hidden flex-1 py-3 px-4">
-                <p className="ticker-animate text-gray-300 text-sm font-inter">
+              <div className="overflow-hidden flex-1 flex items-center py-3.5 px-5 border-l border-white/10">
+                <p className="ticker-animate text-gray-200 text-sm font-inter">
                   {tickerItems.map((item, i) => (
                     <span key={item.id}>
-                      {i > 0 && <span className="mx-6 text-gray-600">|</span>}
+                      {i > 0 && <span className="mx-8 text-saffron/50">•</span>}
                       {item.title}
                     </span>
                   ))}
