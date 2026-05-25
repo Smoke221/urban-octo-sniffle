@@ -11,6 +11,17 @@ export interface Event {
 
 export const events: Event[] = [
   {
+    id: '0',
+    title: 'Samuhika Madive 2026 — 5001 Couples, DCM Shivakumar as Chief Guest',
+    date: 'May 3, 2026',
+    location: 'Sindhanur, Raichur District',
+    category: 'Social',
+    description:
+      'Badarli organized the most ambitious mass marriage ceremony of his career — 5001 couples wed in a single day in Sindhanur, with Deputy Chief Minister D.K. Shivakumar attending as chief guest. Organized through the BB Foundation on the occasion of his 1-year anniversary as MLC, this landmark event provided a dignified and completely cost-free wedding to thousands of families from economically weaker sections across Kalyana Karnataka.',
+    status: 'past',
+    highlight: true,
+  },
+  {
     id: '1',
     title: 'Inauguration of Sainik School, Sindhanur',
     date: 'April 4, 2026',

@@ -47,7 +47,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://twitter.com"
+                href="https://x.com/Basanagouda99"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-saffron transition-colors"
@@ -55,7 +55,7 @@ export default function Footer() {
                 <Twitter size={15} />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1AoCVMZNip/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-saffron transition-colors"
@@ -63,7 +63,7 @@ export default function Footer() {
                 <Facebook size={15} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/basanagoudbadarli"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-saffron transition-colors"
@@ -71,7 +71,7 @@ export default function Footer() {
                 <Instagram size={15} />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://youtube.com/@basanagoudabadarli2592"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-saffron transition-colors"
@@ -127,7 +127,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-300 text-sm font-inter">
                 <MapPin size={16} className="text-saffron mt-0.5 shrink-0" />
-                <span>Jana Spandana Office, Sindhanur, Raichur District, Karnataka – 584128</span>
+                <span>Jana Spandana Office, Kustagi Road, Basava Nagar, Sindhanur, Raichur District, Karnataka – 584128</span>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm font-inter">
                 <Phone size={16} className="text-saffron shrink-0" />
@@ -138,10 +138,10 @@ export default function Footer() {
               <li className="flex items-center gap-3 text-gray-300 text-sm font-inter">
                 <Mail size={16} className="text-saffron shrink-0" />
                 <a
-                  href="mailto:contact@basanagoudabadarli.com"
+                  href="mailto:badarlibasanagouda@gmail.com"
                   className="hover:text-saffron transition-colors"
                 >
-                  contact@basanagoudabadarli.com
+                  badarlibasanagouda@gmail.com
                 </a>
               </li>
             </ul>

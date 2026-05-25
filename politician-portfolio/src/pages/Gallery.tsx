@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { galleryItems, galleryCategories, type GalleryCategory } from '../data/gallery';
 import MediaCard from '../components/ui/MediaCard';
 import SectionTitle from '../components/ui/SectionTitle';
-import FadeInSection, { StaggerContainer, StaggerItem } from '../components/ui/FadeInSection';
+import FadeInSection from '../components/ui/FadeInSection';
 import type { ComponentType } from 'react';
 import { Images, Film } from 'lucide-react';
 
@@ -103,16 +104,25 @@ export default function Gallery() {
           </FadeInSection>
 
           {/* Masonry grid — ratio-aware column spans */}
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-auto">
-              {filtered.map((item) => {
+          <div
+            key={`${activeCategory}-${mediaFilter}`}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-auto"
+          >
+            {filtered.map((item, idx) => {
               const colSpan = item.ratio === '16/9' ? 'col-span-2' : 'col-span-1';
               return (
-                <StaggerItem key={item.id} className={colSpan}>
+                <motion.div
+                  key={item.id}
+                  className={colSpan}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, delay: Math.min(idx * 0.04, 0.8), ease: [0.22, 1, 0.36, 1] }}
+                >
                   <MediaCard item={item} />
-                </StaggerItem>
+                </motion.div>
               );
             })}
-          </StaggerContainer>
+          </div>
 
           {filtered.length === 0 && (
             <div className="text-center py-20">

@@ -11,6 +11,28 @@ export interface NewsItem {
 
 export const newsItems: NewsItem[] = [
   {
+    id: '0',
+    title: 'Landmark Samuhika Madive 2026 — 5001 Couples Wed, DCM Shivakumar Presides',
+    date: 'May 3, 2026',
+    category: 'Social Service',
+    excerpt:
+      'Marking one year as MLC, Badarli organized a historic mass marriage for 5001 couples in Sindhanur — attended by Deputy Chief Minister D.K. Shivakumar, making it the largest such event in North Karnataka\'s recent history.',
+    content:
+      'On May 3, 2026, marking exactly one year as MLC, Basanagouda Badarli organized a landmark Samuhika Madive (mass marriage) for 5001 couples in Sindhanur, Raichur district. The event was graced by Deputy Chief Minister D.K. Shivakumar as the chief guest, reflecting the political weight Badarli commands in North Karnataka. Organized through the BB Foundation, the ceremony provided couples from economically weaker backgrounds a dignified, cost-free wedding. This is the latest in a series of mass marriage events: 51 couples in 2023, 72 in 2025, and now a historic 5001 in 2026 — cementing the BB Foundation\'s reputation as Kalyana Karnataka\'s most impactful social service organization.',
+    isTicker: true,
+  },
+  {
+    id: '0a',
+    title: 'One Year as MLC: Over ₹42 Crore in Works Delivered for Sindhanur',
+    date: 'May 2026',
+    category: 'Infrastructure',
+    excerpt:
+      'Completing one year in the Karnataka Legislative Council, Badarli has delivered ₹42 crore in sanctioned development works for Sindhanur — roads, drainage, healthcare, and schools.',
+    content:
+      'Marking one year in the Karnataka Legislative Council, Basanagouda Badarli has secured over ₹42 crore in sanctioned development works for Sindhanur constituency. Key achievements include 134+ road repairs, the Indira Rejuvenation Trauma Care Center (₹3 crore), a 24/7 drinking water supply project worth ₹1.80 crore, and a ₹340 crore CMSF campus project. The works span agriculture, healthcare, education, and urban development — fulfilling promises made at the time of his election to the MLC seat in 2024.',
+    isTicker: true,
+  },
+  {
     id: '1',
     title: 'Sainik School Inaugurated in Sindhanur — A Major Win for North Karnataka',
     date: 'April 4, 2026',

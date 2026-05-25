@@ -26,7 +26,7 @@ const contactDetails = [
   {
     icon: MapPin,
     title: 'Office Address',
-    lines: ['Jana Spandana Office, Sindhanur', 'Raichur District, Karnataka – 584128'],
+    lines: ['Jana Spandana Office, Kustagi Road,', 'Basava Nagar, Sindhanur, Raichur District, Karnataka – 584128'],
   },
   {
     icon: Phone,
@@ -36,7 +36,7 @@ const contactDetails = [
   {
     icon: Mail,
     title: 'Email',
-    lines: ['contact@basanagoudabadarli.com'],
+    lines: ['badarlibasanagouda@gmail.com'],
   },
   {
     icon: Clock,

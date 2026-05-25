@@ -7,8 +7,13 @@ import { MapPin, Users, Award, GraduationCap } from 'lucide-react';
 const quickFacts = [
   { label: 'Party', value: 'Indian National Congress (INC)' },
   { label: 'Current Office', value: 'Member of the Legislative Council (MLC), Karnataka' },
-  { label: 'Hometown', value: 'Sindhanur, Raichur District' },
-  { label: 'Past Roles', value: 'President of Karnataka Pradesh Youth Congress Committee (KPYCC)' },
+  { label: 'Date of Birth', value: 'January 1, 1983' },
+  { label: "Father's Name", value: 'Veeranagouda Badarli' },
+  { label: 'Education', value: 'B.Com, Commerce Graduate' },
+  { label: 'Permanent Address', value: 'Post Badarli, Tq Sindhanur, Dist Raichur' },
+  { label: 'Occupation', value: 'Agriculture & Social Service' },
+  { label: 'Party Roles', value: 'State President KPYCC (2017–21) · AICC Member (2019–21) · General Secretary KPCC (2022–present)' },
+  { label: 'Foundation', value: 'Basanagouda Badarli (BB) Foundation — est. 2018' },
   { label: 'Key Issues', value: 'Youth empowerment, Education reform, Agriculture & Regional development in Raichur' },
   { label: 'Community', value: 'Lingayat' },
   { label: 'Elected (MLC)', value: 'Early 2024 (Legislative Assembly quota)' },
@@ -61,30 +66,55 @@ export default function About() {
                 <SectionTitle tag="Biography" title="His Story" />
                 <div className="space-y-5 text-gray-600 font-inter leading-relaxed">
                   <p>
-                    Basanagouda Badarli is a prominent leader within the Indian National Congress
-                    (INC) in Karnataka, currently serving as a Member of the Legislative Council
-                    (MLC). He is a rising figure in the state's political landscape, particularly
-                    known for his background in youth leadership.
+                    Born on January 1, 1983, in Post Badarli village, Sindhanur Taluk, Raichur
+                    District, Basanagouda Badarli (son of Veeranagouda Badarli) grew up in a farming
+                    family that valued hard work, community service, and political engagement.
+                    Agriculture is in his blood — he continues to be involved in farming and leads
+                    cooperative societies in the region to this day.
                   </p>
                   <p>
-                    He was elected to the Karnataka Legislative Council in early 2024 via the
-                    Legislative Assembly (MLAs) quota. As of 2026, he is a key member of the
-                    government-appointed panel tasked with reviving student union elections in
-                    Karnataka's colleges and universities — a major policy shift aimed at grooming
-                    future grassroots leaders.
+                    His political journey began in 2006 when he joined the NSUI (National Students'
+                    Union of India) as Sindhanur Taluk President. He was elevated to NSUI Raichur
+                    District President by 2008, and moved into the Youth Congress in 2009 as
+                    Sindhanur Taluk Youth Congress President. By 2010 he was appointed State
+                    Secretary of the Karnataka Pradesh Youth Congress Committee (KPYCC), and from
+                    2011 to 2017 he served as President of the Koppal Parliament Youth Congress
+                    Committee — a six-year tenure that built his organisational depth across
+                    Raichur and Koppal districts.
                   </p>
                   <p>
-                    He has recently been vocal about his commitment to public service in the
-                    Sindhanur region (Raichur district), often emphasizing his dedication to the
-                    welfare of the local population. He operates a Jana Spandana (People's Pulse)
-                    office in Sindhanur for direct citizen grievance redressal.
+                    The peak of his Youth Congress career came in 2017 when he was elected State
+                    President of the KPYCC with a record-breaking margin of over 9,000 votes. During
+                    his tenure (2017–2021), he digitized the youth wing's membership and conducted
+                    extensive statewide "Janadhikara" rallies. He simultaneously served as an AICC
+                    (All India Congress Committee) Member from 2019 to 2021, and has been General
+                    Secretary of the KPCC (Karnataka Pradesh Congress Committee) since 2022.
                   </p>
                   <p>
-                    Badarli gained state-wide recognition in 2017 when he was elected as the
-                    President of the Karnataka Pradesh Youth Congress Committee (KPYCC) with a
-                    record-breaking margin of over 9,000 votes. During his tenure, he was credited
-                    with digitizing the youth wing's membership and conducting extensive grassroots
-                    "Janadhikara" rallies across the state.
+                    In 2018, Badarli founded the Basanagouda Badarli (BB) Foundation to
+                    institutionalize his social service work. The foundation has organized mass
+                    marriage ceremonies (51 couples in 2023, 72 in 2025, 5001 in 2026), free health
+                    camps, job fairs, and annual Dasoha Seva programs for Srishaila pilgrims. During
+                    the COVID-19 pandemic, the BB Foundation distributed over 42,000 masks, gave
+                    1,512 vaccines free of cost, and provided Remdesivir injections to 45 critically
+                    ill patients — at no charge.
+                  </p>
+                  <p>
+                    In early 2024, Badarli was elected to the Karnataka Legislative Council via the
+                    Legislative Assembly quota. On May 3, 2026 — marking exactly one year as MLC —
+                    he hosted a landmark Samuhika Madive (mass marriage) for 5001 couples in
+                    Sindhanur, attended by Deputy Chief Minister D.K. Shivakumar. He has delivered
+                    over ₹42 crore in development works — roads, water, health, and education — in
+                    his first year in office.
+                  </p>
+                  <p>
+                    He operates a Jana Spandana (People's Pulse) office at Kustagi Road, Basava
+                    Nagar, Sindhanur (inaugurated March 26, 2023) for direct citizen grievance
+                    redressal. He is also a core member of the government-appointed panel tasked
+                    with reviving student union elections in Karnataka after a 37-year hiatus, and
+                    the foremost voice pushing for Sindhanur to become a separate district —
+                    a cause that has reached the feasibility report stage with the State Revenue
+                    Department.
                   </p>
                 </div>
               </div>
@@ -131,10 +161,10 @@ export default function About() {
           </FadeInSection>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             {[
-              { icon: MapPin, label: 'Hometown', value: 'Sindhanur, Raichur District' },
-              { icon: Users, label: 'Political Family', value: 'Nephew of Hampanagouda Badarli, 5-time MLA from Sindhanur' },
-              { icon: Award, label: 'Community', value: 'Lingayat — a key demographic in Karnataka politics' },
-              { icon: GraduationCap, label: 'Education Focus', value: 'Champion of student empowerment and digital literacy' },
+              { icon: MapPin, label: 'Hometown', value: 'Post Badarli, Sindhanur, Raichur District — a farming village where his roots run deep' },
+              { icon: Users, label: 'Political Family', value: 'Nephew of Hampanagouda Badarli, 5-time MLA from Sindhanur; brother Somanagouda Badarli is a RDCC Director' },
+              { icon: Award, label: 'Cooperative Leadership', value: 'President of Krushi Mitra Vividoddesh Souhardha Sahakari Sangh, Sindhanur (2017–present)' },
+              { icon: GraduationCap, label: 'Education & Foundation', value: 'B.Com graduate; founded BB Foundation in 2018 for mass welfare programs across Kalyana Karnataka' },
             ].map(item => (
               <StaggerItem key={item.label}>
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">

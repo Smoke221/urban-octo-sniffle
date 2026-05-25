@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Twitter, Facebook, Instagram, ChevronDown } from 'lucide-react';
+import { Menu, X, Twitter, Facebook, Instagram, Youtube, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../assets/images/name_logo.jpeg';
 
@@ -149,7 +149,7 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
             <div className="hidden lg:flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/Basanagouda99"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-1.5 rounded-full hover:text-saffron transition-colors ${
@@ -159,7 +159,7 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
                   <Twitter size={16} />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/share/1AoCVMZNip/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-1.5 rounded-full hover:text-saffron transition-colors ${
@@ -169,7 +169,7 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
                   <Facebook size={16} />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/basanagoudbadarli"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-1.5 rounded-full hover:text-saffron transition-colors ${
@@ -177,6 +177,16 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
                   }`}
                 >
                   <Instagram size={16} />
+                </a>
+                <a
+                  href="https://youtube.com/@basanagoudabadarli2592"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-1.5 rounded-full hover:text-saffron transition-colors ${
+                    isSolid ? 'text-navy' : 'text-white'
+                  }`}
+                >
+                  <Youtube size={16} />
                 </a>
               </div>
               <button
@@ -277,14 +287,17 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
                   Join Community
                 </button>
                 <div className="flex justify-center gap-4 mt-4">
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">
+                  <a href="https://x.com/Basanagouda99" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">
                     <Twitter size={20} />
                   </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">
+                  <a href="https://www.facebook.com/share/1AoCVMZNip/" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">
                     <Facebook size={20} />
                   </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">
+                  <a href="https://www.instagram.com/basanagoudbadarli" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">
                     <Instagram size={20} />
+                  </a>
+                  <a href="https://youtube.com/@basanagoudabadarli2592" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">
+                    <Youtube size={20} />
                   </a>
                 </div>
               </div>

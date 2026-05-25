@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(powershell -Command \"Get-ChildItem 'C:\\\\Users\\\\VenkataAnilKumarRedd\\\\SP\\\\urban-octo-sniffle\\\\politician-portfolio\\\\src\\\\assets\\\\images\\\\gallery_6*','C:\\\\Users\\\\VenkataAnilKumarRedd\\\\SP\\\\urban-octo-sniffle\\\\politician-portfolio\\\\src\\\\assets\\\\images\\\\gallery_7*','C:\\\\Users\\\\VenkataAnilKumarRedd\\\\SP\\\\urban-octo-sniffle\\\\politician-portfolio\\\\src\\\\assets\\\\images\\\\gallery_8*' | Select-Object Name | Sort-Object Name\")"
+    ]
+  }
+}

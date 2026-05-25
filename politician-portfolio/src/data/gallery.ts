@@ -64,6 +64,26 @@ import g57 from '../assets/images/gallery_57.jpeg';
 import g58 from '../assets/images/gallery_58.jpeg';
 import g59 from '../assets/images/gallery_59.jpeg';
 import g60 from '../assets/images/gallery_60.jpeg';
+import g61 from '../assets/images/gallery_61.jpeg';
+import g62 from '../assets/images/gallery_62.jpeg';
+import g63 from '../assets/images/gallery_63.jpeg';
+import g64 from '../assets/images/gallery_64.jpeg';
+import g65 from '../assets/images/gallery_65.jpeg';
+import g66 from '../assets/images/gallery_66.jpeg';
+import g67 from '../assets/images/gallery_67.jpeg';
+import g68 from '../assets/images/gallery_68.jpeg';
+import g69 from '../assets/images/gallery_69.jpeg';
+import g70 from '../assets/images/gallery_70.jpeg';
+import g71 from '../assets/images/gallery_71.jpeg';
+import g72 from '../assets/images/gallery_72.jpeg';
+import g73 from '../assets/images/gallery_73.jpeg';
+import g74 from '../assets/images/gallery_74.jpeg';
+import g75 from '../assets/images/gallery_75.jpeg';
+import g76 from '../assets/images/gallery_76.jpeg';
+import g77 from '../assets/images/gallery_77.jpeg';
+import g78 from '../assets/images/gallery_78.jpeg';
+import g79 from '../assets/images/gallery_79.jpeg';
+import g80 from '../assets/images/gallery_80.jpeg';
 
 // Re-export named images for use in pages
 export { heroImg, hero2Img, logoImg };
@@ -155,6 +175,28 @@ export const galleryItems: GalleryItem[] = [
   { id: 'g58', type: 'image', src: g58, ratio: '3/4',  caption: 'Urban Development — Sindhanur',     category: 'infrastructure' },
   { id: 'g59', type: 'image', src: g59, ratio: '4/3',  caption: 'Park & Public Space Upgrade',       category: 'infrastructure' },
   { id: 'g60', type: 'image', src: g60, ratio: '16/9', caption: 'Infrastructure Progress Review',    category: 'infrastructure' },
+
+  // ── SAMUHIKA MADIVE 2026 — May 3 Event (61–80) ──────────
+  { id: 'g61', type: 'image', src: g61, ratio: '16/9', caption: 'Samuhika Madive 2026 — Grand Assembly',       category: 'community', featured: true },
+  { id: 'g62', type: 'image', src: g62, ratio: '4/3',  caption: 'Samuhika Madive 2026 — 5001 Couples',        category: 'community', featured: true },
+  { id: 'g63', type: 'image', src: g63, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Ceremony Highlights', category: 'community', featured: true },
+  { id: 'g64', type: 'image', src: g64, ratio: '3/4',  caption: 'Samuhika Madive 2026 — Blessings Ceremony',  category: 'community' },
+  { id: 'g65', type: 'image', src: g65, ratio: '16/9', caption: 'Samuhika Madive 2026 — DCM Shivakumar Presides', category: 'community', featured: true },
+  { id: 'g66', type: 'image', src: g66, ratio: '4/3',  caption: 'Samuhika Madive 2026 — Public Gathering',    category: 'community' },
+  { id: 'g67', type: 'image', src: g67, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Badarli Addresses Crowd', category: 'community' },
+  { id: 'g68', type: 'image', src: g68, ratio: '3/4',  caption: 'Samuhika Madive 2026 — Cultural Programme',  category: 'community' },
+  { id: 'g69', type: 'image', src: g69, ratio: '16/9', caption: 'Samuhika Madive 2026 — Sindhanur Event',     category: 'community' },
+  { id: 'g70', type: 'image', src: g70, ratio: '4/3',  caption: 'Samuhika Madive 2026 — BB Foundation',       category: 'community' },
+  { id: 'g71', type: 'image', src: g71, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Community Moment',    category: 'community' },
+  { id: 'g72', type: 'image', src: g72, ratio: '3/4',  caption: 'Samuhika Madive 2026 — Wedding Felicitation', category: 'community' },
+  { id: 'g73', type: 'image', src: g73, ratio: '16/9', caption: 'Samuhika Madive 2026 — Stage Programme',     category: 'community' },
+  { id: 'g74', type: 'image', src: g74, ratio: '4/3',  caption: 'Samuhika Madive 2026 — Dignitaries Present', category: 'community' },
+  { id: 'g75', type: 'image', src: g75, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Mass Celebration',    category: 'community' },
+  { id: 'g76', type: 'image', src: g76, ratio: '3/4',  caption: 'Samuhika Madive 2026 — Reception',           category: 'community' },
+  { id: 'g77', type: 'image', src: g77, ratio: '16/9', caption: 'Samuhika Madive 2026 — Crowd View',          category: 'community' },
+  { id: 'g78', type: 'image', src: g78, ratio: '4/3',  caption: 'Samuhika Madive 2026 — Event Overview',      category: 'community' },
+  { id: 'g79', type: 'image', src: g79, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Badarli with Couples',category: 'community' },
+  { id: 'g80', type: 'image', src: g80, ratio: '16/9', caption: 'Samuhika Madive 2026 — Closing Ceremony',    category: 'community' },
 ];
 
 export const galleryCategories = [

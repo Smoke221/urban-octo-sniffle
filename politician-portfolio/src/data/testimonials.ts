@@ -63,4 +63,40 @@ export const testimonials: Testimonial[] = [
       'The push for a 50-bed critical care unit is a game-changer. Patients who would have died on the way to Hubli can now get emergency treatment right here. Badarli sir\'s dedication to healthcare is commendable.',
     rating: 5,
   },
+  {
+    id: '7',
+    name: 'Nagamma Devi',
+    location: 'Badarli Village, Sindhanur',
+    role: 'Senior Citizen',
+    quote:
+      'We are from Badarli village — his own village. He never forgot where he came from. He got our roads repaired, helped with ration card issues, and the old age home regularly receives his support. He is truly our own son.',
+    rating: 5,
+  },
+  {
+    id: '8',
+    name: 'Raju Nayak',
+    location: 'Sindhanur City',
+    role: 'Youth Congress Volunteer',
+    quote:
+      'I started as an NSUI volunteer in 2012 inspired by Badarli sir. He taught us that service comes before politics. The values he instilled — integrity, hard work, and helping others — shape everything I do even today.',
+    rating: 5,
+  },
+  {
+    id: '9',
+    name: 'Shanthavva Patil',
+    location: 'Manvi Taluk, Raichur',
+    role: 'BB Foundation Beneficiary',
+    quote:
+      'My daughter was married through the Samuhika Madive organized by Badarli sir\'s BB Foundation. Without his program, we could never have afforded a proper wedding. He gave our family dignity we could not have given ourselves. We are forever grateful.',
+    rating: 5,
+  },
+  {
+    id: '10',
+    name: 'Venkatesh Kammar',
+    location: 'Sindhanur Taluk',
+    role: 'Cooperative Society Member',
+    quote:
+      'As a member of the Krushi Mitra cooperative that Badarli sir leads, I have seen how he fights for farmers in meetings and policy discussions. He is not just a politician — he is a farmer himself and he understands our daily struggles on the ground.',
+    rating: 5,
+  },
 ];
