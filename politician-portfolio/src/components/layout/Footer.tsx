@@ -164,6 +164,12 @@ export default function Footer() {
             <span className="text-saffron">Serving Karnataka with Dedication</span>
           </p>
         </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4 text-center text-xs text-gray-500 font-inter">
+          Developed by{' '}
+          <span className="text-gray-300 font-medium">MICF Pvt Ltd</span>
+          {' '}×{' '}
+          <span className="text-saffron font-medium">Basanagouda Badarli</span>
+        </div>
       </div>
 
       {/* INC Tricolor bottom strip */}

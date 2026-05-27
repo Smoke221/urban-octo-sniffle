@@ -58,12 +58,6 @@ import g51 from '../assets/images/gallery_51.jpeg';
 import g52 from '../assets/images/gallery_52.jpeg';
 import g53 from '../assets/images/gallery_53.jpeg';
 import g54 from '../assets/images/gallery_54.jpeg';
-import g55 from '../assets/images/gallery_55.jpeg';
-import g56 from '../assets/images/gallery_56.jpeg';
-import g57 from '../assets/images/gallery_57.jpeg';
-import g58 from '../assets/images/gallery_58.jpeg';
-import g59 from '../assets/images/gallery_59.jpeg';
-import g60 from '../assets/images/gallery_60.jpeg';
 import g61 from '../assets/images/gallery_61.jpeg';
 import g62 from '../assets/images/gallery_62.jpeg';
 import g63 from '../assets/images/gallery_63.jpeg';
@@ -169,12 +163,6 @@ export const galleryItems: GalleryItem[] = [
   { id: 'g52', type: 'image', src: g52, ratio: '4/3',  caption: 'Drinking Water Project Review',     category: 'infrastructure' },
   { id: 'g53', type: 'image', src: g53, ratio: '1/1',  caption: 'Community Hall Inauguration',       category: 'infrastructure' },
   { id: 'g54', type: 'image', src: g54, ratio: '3/4',  caption: 'Drainage System Inspection',        category: 'infrastructure' },
-  { id: 'g55', type: 'image', src: g55, ratio: '16/9', caption: 'State Highway Development',         category: 'infrastructure' },
-  { id: 'g56', type: 'image', src: g56, ratio: '4/3',  caption: 'Jawalagera Water Project Site',     category: 'infrastructure' },
-  { id: 'g57', type: 'image', src: g57, ratio: '1/1',  caption: 'Village Link Road — Manvi Taluk',   category: 'infrastructure' },
-  { id: 'g58', type: 'image', src: g58, ratio: '3/4',  caption: 'Urban Development — Sindhanur',     category: 'infrastructure' },
-  { id: 'g59', type: 'image', src: g59, ratio: '4/3',  caption: 'Park & Public Space Upgrade',       category: 'infrastructure' },
-  { id: 'g60', type: 'image', src: g60, ratio: '16/9', caption: 'Infrastructure Progress Review',    category: 'infrastructure' },
 
   // ── SAMUHIKA MADIVE 2026 — May 3 Event (61–80) ──────────
   { id: 'g61', type: 'image', src: g61, ratio: '16/9', caption: 'Samuhika Madive 2026 — Grand Assembly',       category: 'community', featured: true },

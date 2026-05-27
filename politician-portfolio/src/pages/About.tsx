@@ -162,7 +162,7 @@ export default function About() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             {[
               { icon: MapPin, label: 'Hometown', value: 'Post Badarli, Sindhanur, Raichur District — a farming village where his roots run deep' },
-              { icon: Users, label: 'Political Family', value: 'Nephew of Hampanagouda Badarli, 5-time MLA from Sindhanur; brother Somanagouda Badarli is a RDCC Director' },
+              { icon: Users, label: 'Political Family', value: 'Son of Veeranagouda Badarli; brother Somanagouda Badarli is a RDCC Director' },
               { icon: Award, label: 'Cooperative Leadership', value: 'President of Krushi Mitra Vividoddesh Souhardha Sahakari Sangh, Sindhanur (2017–present)' },
               { icon: GraduationCap, label: 'Education & Foundation', value: 'B.Com graduate; founded BB Foundation in 2018 for mass welfare programs across Kalyana Karnataka' },
             ].map(item => (

@@ -136,15 +136,6 @@ export default function Gallery() {
             </div>
           )}
 
-          {/* Note about upcoming media */}
-          <FadeInSection className="mt-12 p-6 bg-navy/5 rounded-2xl border border-navy/10 text-center">
-            <p className="text-sm text-gray-500 font-inter">
-              More photos and videos are being added regularly.{' '}
-              <span className="text-navy font-medium">
-                Videos support all aspect ratios — portrait (9:16), landscape (16:9), square (1:1) and standard (4:3).
-              </span>
-            </p>
-          </FadeInSection>
         </div>
       </section>
     </div>

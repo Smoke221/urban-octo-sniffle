@@ -155,7 +155,7 @@ export const achievements: Achievement[] = [
   {
     id: '5a',
     year: '2026',
-    title: 'Samuhika Madive — 5001 Couples, DCM Shivakumar Presides',
+    title: '150 Samuhika Madive — 5001 auspicious offerings for females, DCM Shivakumar Presides',
     description:
       'On May 3, 2026 — marking exactly one year as MLC — organized a landmark Samuhika Madive (mass marriage) for 5001 couples in Sindhanur. Deputy Chief Minister D.K. Shivakumar attended as chief guest, making it one of the largest such ceremonies in North Karnataka\'s history.',
     category: 'Social Service',

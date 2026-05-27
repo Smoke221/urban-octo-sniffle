@@ -86,23 +86,22 @@ export const events: Event[] = [
   {
     id: '7',
     title: 'Student Union Election Report Submission',
-    date: 'Expected Mid-April 2026',
+    date: 'April 2026',
     location: 'Bengaluru, Karnataka',
     category: 'Education Policy',
     description:
-      'As a member of the state-appointed panel, Badarli is expected to participate in the formal submission of the Student Union Elections report to the Chief Minister. The report will outline whether campus elections return under political party banners or as non-partisan contests.',
-    status: 'upcoming',
-    highlight: true,
+      'Badarli participated in the formal submission of the Student Union Elections report to the Chief Minister as a member of the state-appointed panel. The report outlined the framework for reviving campus democracy in Karnataka after a 37-year hiatus.',
+    status: 'past',
   },
   {
     id: '8',
     title: 'Janaspandana People-Connect Rallies',
-    date: 'Upcoming – April/May 2026',
+    date: 'April–May 2026',
     location: 'Sindhanur Region, Raichur District',
     category: 'Community',
     description:
-      'Badarli is expected to lead a series of grassroots "Janaspandana" (people-connect) meetings to further the demand for making Sindhanur a separate district for better administrative reach.',
-    status: 'upcoming',
+      'Badarli led a series of grassroots "Janaspandana" (people-connect) meetings across the Sindhanur region, furthering the demand for Sindhanur\'s recognition as a separate district for better administrative reach.',
+    status: 'past',
   },
   {
     id: '9',
@@ -127,12 +126,12 @@ export const events: Event[] = [
   },
   {
     id: '11',
-    title: 'Samuhika Madive (Mass Marriage Ceremony)',
-    date: 'Upcoming – 2026',
+    title: 'Samuhika Madive — BB Foundation Mass Marriage Series',
+    date: 'May 3, 2026',
     location: 'Raichur & Sindhanur Regions',
     category: 'Social',
     description:
-      'Badarli is a strong proponent of Samuhika Madive (Mass Marriages), viewing them as a vital social service to reduce the financial burden on rural families and promote social equality. These events have become a hallmark of the Badarli family\'s leadership style.',
-    status: 'upcoming',
+      'Badarli has championed Samuhika Madive (Mass Marriages) as a vital social service to reduce the financial burden on rural families. The BB Foundation has now conducted mass marriages for 51 couples (2023), 72 couples (2025), and a landmark 5001 couples on May 3, 2026 — with Deputy CM D.K. Shivakumar presiding.',
+    status: 'past',
   },
 ];

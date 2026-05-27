@@ -262,7 +262,7 @@ export default function Home({
                   </div>
                     {/* Stats badges */}
                     <div className="absolute -bottom-4 -right-4 bg-saffron text-white rounded-xl p-4 shadow-xl">
-                      <p className="font-poppins font-bold text-2xl">9+</p>
+                      <p className="font-poppins font-bold text-2xl">20+</p>
                       <p className="text-xs font-inter">Years of Service</p>
                     </div>
                   </div>
