@@ -1,8 +1,13 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { MapPin, Phone, Mail, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 import FadeInSection from '../components/ui/FadeInSection';
 import SectionTitle from '../components/ui/SectionTitle';
+
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  as string;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  as string;
 
 interface ContactFormData {
   name: string;
@@ -47,6 +52,7 @@ const contactDetails = [
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -55,10 +61,25 @@ export default function Contact() {
   } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log('Contact form:', data);
-    await new Promise(r => setTimeout(r, 800));
-    setSubmitted(true);
-    reset();
+    setSendError(null);
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name:    data.name,
+          from_phone:   data.phone,
+          category:     data.category,
+          message:      data.issue,
+          reply_to:     'micfevp@gmail.com',
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSendError('Something went wrong. Please try again or call the office directly.');
+    }
   };
 
   return (
@@ -218,12 +239,19 @@ export default function Contact() {
                       )}
                     </div>
 
+                    {sendError && (
+                      <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                        <AlertCircle size={16} className="text-red-500 shrink-0 mt-0.5" />
+                        <p className="text-red-600 text-sm font-inter">{sendError}</p>
+                      </div>
+                    )}
+
                     <button
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-saffron hover:bg-saffron-dark disabled:opacity-60 text-white font-semibold font-poppins py-4 rounded-xl transition-all hover:shadow-lg text-base"
                     >
-                      {isSubmitting ? 'Submitting...' : 'Submit Ticket'}
+                      {isSubmitting ? 'Sending…' : 'Submit Ticket'}
                     </button>
                   </form>
                 )}
