@@ -1,13 +1,9 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { MapPin, Phone, Mail, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 import FadeInSection from '../components/ui/FadeInSection';
 import SectionTitle from '../components/ui/SectionTitle';
-
-const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  as string;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
-const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  as string;
+import { EMAILJS_TEMPLATES, REPLY_TO_EMAIL, sendFormEmail } from '../lib/emailjs';
 
 interface ContactFormData {
   name: string;
@@ -63,18 +59,14 @@ export default function Contact() {
   const onSubmit = async (data: ContactFormData) => {
     setSendError(null);
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name:    data.name,
-          from_phone:   data.phone,
-          category:     data.category,
-          message:      data.issue,
-          reply_to:     'micfevp@gmail.com',
-        },
-        EMAILJS_PUBLIC_KEY,
-      );
+      await sendFormEmail(EMAILJS_TEMPLATES.support, {
+        from_name: data.name,
+        from_phone: data.phone,
+        category: data.category,
+        message: data.issue,
+        form_source: 'Contact Page',
+        reply_to: REPLY_TO_EMAIL,
+      });
       setSubmitted(true);
       reset();
     } catch {

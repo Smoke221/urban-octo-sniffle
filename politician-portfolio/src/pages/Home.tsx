@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
@@ -18,6 +19,8 @@ import {
   HeartHandshake,
   Ticket,
   ChevronRight,
+  CheckCircle,
+  AlertCircle,
 } from 'lucide-react';
 
 import SectionTitle from '../components/ui/SectionTitle';
@@ -27,8 +30,7 @@ import NewsCard from '../components/ui/NewsCard';
 import TestimonialCard from '../components/ui/TestimonialCard';
 import MediaCard from '../components/ui/MediaCard';
 import FadeInSection, { StaggerContainer, StaggerItem } from '../components/ui/FadeInSection';
-import JoinCommunityModal from '../components/modals/JoinCommunityModal';
-import RaiseTicketModal from '../components/modals/RaiseTicketModal';
+import { EMAILJS_TEMPLATES, REPLY_TO_EMAIL, sendFormEmail } from '../lib/emailjs';
 
 import { services } from '../data/services';
 import { events } from '../data/events';
@@ -36,6 +38,12 @@ import { newsItems, tickerItems } from '../data/news';
 import { testimonials } from '../data/testimonials';
 import { achievements } from '../data/achievements';
 import { featuredGalleryItems, heroImg, hero2Img } from '../data/gallery';
+
+interface JoinFormData {
+  name: string;
+  phone: string;
+  district: string;
+}
 
 const stats = [
   { label: 'Votes Margin (Youth Congress)', value: 9000, suffix: '+', prefix: '' },
@@ -63,10 +71,8 @@ function StatItem({ stat }: { stat: typeof stats[0] }) {
 }
 
 export default function Home({
-  onJoinClick,
   onTicketClick,
 }: {
-  onJoinClick: () => void;
   onTicketClick: () => void;
 }) {
   const upcomingEvents = events.filter(e => e.status === 'upcoming').slice(0, 3);
@@ -74,12 +80,57 @@ export default function Home({
   const [eventsTab, setEventsTab] = useState<'upcoming' | 'past'>('upcoming');
   const displayedEvents = eventsTab === 'upcoming' ? upcomingEvents : pastEvents;
 
+  const [joinSubmitted, setJoinSubmitted] = useState(false);
+  const [joinSendError, setJoinSendError] = useState<string | null>(null);
+  const {
+    register: registerJoin,
+    handleSubmit: handleJoinSubmit,
+    reset: resetJoin,
+    formState: { errors: joinErrors, isSubmitting: isJoinSubmitting },
+  } = useForm<JoinFormData>();
+
+  const onJoinSubmit = async (data: JoinFormData) => {
+    setJoinSendError(null);
+    try {
+      await sendFormEmail(EMAILJS_TEMPLATES.join, {
+        from_name: data.name,
+        from_phone: data.phone,
+        district: data.district,
+        message: '(No message provided)',
+        form_source: 'Homepage — Join Community',
+        reply_to: REPLY_TO_EMAIL,
+      });
+      setJoinSubmitted(true);
+      resetJoin();
+    } catch {
+      setJoinSendError('Something went wrong. Please try again or contact the office directly.');
+    }
+  };
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const navbarOffset = 96;
+    const top = el.getBoundingClientRect().top + window.scrollY - navbarOffset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
+  const handleJoinCommunityClick = () => {
+    scrollToSection('join-community');
+  };
+
+  const handleUpcomingEventsClick = () => {
+    setEventsTab('upcoming');
+    requestAnimationFrame(() => scrollToSection('events'));
+  };
+
   return (
     <div>
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
       <section className="relative min-h-screen bg-navy overflow-hidden flex items-center">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
+        {/* Background pattern — decorative only, must not block clicks */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute inset-0" style={{
             backgroundImage: `repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)`,
             backgroundSize: '30px 30px',
@@ -87,14 +138,14 @@ export default function Home({
         </div>
 
         {/* Saffron diagonal accent */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block pointer-events-none">
           <div
             className="absolute inset-0 bg-gradient-to-br from-saffron/20 to-saffron/5"
             style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)' }}
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div>
@@ -157,20 +208,22 @@ export default function Home({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-wrap gap-4"
+                className="relative z-10 flex flex-wrap gap-4"
               >
                 <button
-                  onClick={onJoinClick}
+                  type="button"
+                  onClick={handleJoinCommunityClick}
                   className="inline-flex items-center gap-2 bg-saffron hover:bg-saffron-dark text-white font-semibold font-poppins px-8 py-3.5 rounded-full transition-all hover:shadow-xl hover:-translate-y-0.5 text-base"
                 >
                   Join Community <Users size={18} />
                 </button>
-                <Link
-                  to="/events"
+                <button
+                  type="button"
+                  onClick={handleUpcomingEventsClick}
                   className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-saffron text-white hover:text-saffron font-semibold font-poppins px-8 py-3.5 rounded-full transition-all text-base"
                 >
                   Upcoming Events <ArrowRight size={18} />
-                </Link>
+                </button>
               </motion.div>
             </div>
 
@@ -207,7 +260,7 @@ export default function Home({
         </div>
 
         {/* News Ticker */}
-        <div className="absolute bottom-0 left-0 right-0 bg-navy-dark/95 backdrop-blur-sm border-t border-white/10 overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 z-10 bg-navy-dark/95 backdrop-blur-sm border-t border-white/10 overflow-hidden pointer-events-none">
           <div className="flex items-stretch">
             <div className="shrink-0 bg-saffron text-white text-xs font-bold font-poppins px-5 py-3 uppercase tracking-widest flex items-center">
               LATEST
@@ -421,7 +474,7 @@ export default function Home({
       </section>
 
       {/* ── 6. EVENTS PREVIEW ──────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section id="events" className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <FadeInSection>
@@ -598,14 +651,14 @@ export default function Home({
       </section>
 
       {/* ── 10. JOIN COMMUNITY CTA ─────────────────────────────── */}
-      <section className="py-20 bg-gradient-to-br from-saffron to-saffron-dark relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section id="join-community" className="py-20 bg-gradient-to-br from-saffron to-saffron-dark relative overflow-hidden scroll-mt-24">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute inset-0" style={{
             backgroundImage: `repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)`,
             backgroundSize: '30px 30px',
           }} />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeInSection direction="left">
               <div>
@@ -645,32 +698,85 @@ export default function Home({
                 <h3 className="font-poppins font-bold text-xl text-navy mb-5">
                   Join Our Community
                 </h3>
-                <div className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Your full name"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-inter focus:outline-none focus:border-saffron transition-all"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone number"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-inter focus:outline-none focus:border-saffron transition-all"
-                  />
-                  <input
-                    type="text"
-                    placeholder="District / Taluk"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-inter focus:outline-none focus:border-saffron transition-all"
-                  />
-                  <button
-                    onClick={onJoinClick}
-                    className="w-full bg-saffron hover:bg-saffron-dark text-white font-semibold font-poppins py-3.5 rounded-xl transition-all hover:shadow-lg"
-                  >
-                    Join Community
-                  </button>
-                  <p className="text-xs text-gray-400 font-inter text-center">
-                    Your information will never be shared.
-                  </p>
-                </div>
+
+                {joinSubmitted ? (
+                  <div className="text-center py-6">
+                    <CheckCircle size={48} className="text-congress-green mx-auto mb-3" />
+                    <h4 className="font-poppins font-bold text-lg text-navy mb-2">
+                      Welcome to the Community!
+                    </h4>
+                    <p className="text-gray-500 font-inter text-sm mb-5">
+                      Thank you for joining. We will be in touch with you soon.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setJoinSubmitted(false)}
+                      className="bg-saffron hover:bg-saffron-dark text-white font-semibold font-poppins px-6 py-2.5 rounded-full transition-all text-sm"
+                    >
+                      Submit Another
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleJoinSubmit(onJoinSubmit)} className="space-y-4">
+                    <div>
+                      <input
+                        {...registerJoin('name', { required: 'Name is required' })}
+                        type="text"
+                        placeholder="Your full name"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-inter focus:outline-none focus:border-saffron focus:ring-2 focus:ring-saffron/20 transition-all"
+                      />
+                      {joinErrors.name && (
+                        <p className="text-red-500 text-xs mt-1">{joinErrors.name.message}</p>
+                      )}
+                    </div>
+                    <div>
+                      <input
+                        {...registerJoin('phone', {
+                          required: 'Phone is required',
+                          pattern: {
+                            value: /^[6-9]\d{9}$/,
+                            message: 'Enter a valid 10-digit mobile number',
+                          },
+                        })}
+                        type="tel"
+                        placeholder="10-digit phone number"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-inter focus:outline-none focus:border-saffron focus:ring-2 focus:ring-saffron/20 transition-all"
+                      />
+                      {joinErrors.phone && (
+                        <p className="text-red-500 text-xs mt-1">{joinErrors.phone.message}</p>
+                      )}
+                    </div>
+                    <div>
+                      <input
+                        {...registerJoin('district', { required: 'District is required' })}
+                        type="text"
+                        placeholder="District / Taluk"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-inter focus:outline-none focus:border-saffron focus:ring-2 focus:ring-saffron/20 transition-all"
+                      />
+                      {joinErrors.district && (
+                        <p className="text-red-500 text-xs mt-1">{joinErrors.district.message}</p>
+                      )}
+                    </div>
+
+                    {joinSendError && (
+                      <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                        <AlertCircle size={16} className="text-red-500 shrink-0 mt-0.5" />
+                        <p className="text-red-600 text-sm font-inter">{joinSendError}</p>
+                      </div>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={isJoinSubmitting}
+                      className="w-full bg-saffron hover:bg-saffron-dark disabled:opacity-60 text-white font-semibold font-poppins py-3.5 rounded-xl transition-all hover:shadow-lg"
+                    >
+                      {isJoinSubmitting ? 'Sending…' : 'Join Community'}
+                    </button>
+                    <p className="text-xs text-gray-400 font-inter text-center">
+                      Your information will never be shared.
+                    </p>
+                  </form>
+                )}
               </div>
             </FadeInSection>
           </div>

@@ -1,7 +1,8 @@
 import { useForm } from 'react-hook-form';
 import { AnimatePresence, motion } from 'framer-motion';
-import { X, CheckCircle } from 'lucide-react';
+import { X, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
+import { EMAILJS_TEMPLATES, REPLY_TO_EMAIL, sendFormEmail } from '../../lib/emailjs';
 
 interface TicketFormData {
   name: string;
@@ -27,6 +28,7 @@ interface RaiseTicketModalProps {
 
 export default function RaiseTicketModal({ open, onClose }: RaiseTicketModalProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -35,14 +37,26 @@ export default function RaiseTicketModal({ open, onClose }: RaiseTicketModalProp
   } = useForm<TicketFormData>();
 
   const onSubmit = async (data: TicketFormData) => {
-    console.log('Raise Ticket form:', data);
-    await new Promise(r => setTimeout(r, 800));
-    setSubmitted(true);
-    reset();
+    setSendError(null);
+    try {
+      await sendFormEmail(EMAILJS_TEMPLATES.support, {
+        from_name: data.name,
+        from_phone: data.phone,
+        category: data.category,
+        message: data.issue,
+        form_source: 'Raise Ticket Modal',
+        reply_to: REPLY_TO_EMAIL,
+      });
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSendError('Something went wrong. Please try again or contact the office directly.');
+    }
   };
 
   const handleClose = () => {
     setSubmitted(false);
+    setSendError(null);
     onClose();
   };
 
@@ -179,12 +193,19 @@ export default function RaiseTicketModal({ open, onClose }: RaiseTicketModalProp
                     )}
                   </div>
 
+                  {sendError && (
+                    <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                      <AlertCircle size={16} className="text-red-500 shrink-0 mt-0.5" />
+                      <p className="text-red-600 text-sm font-inter">{sendError}</p>
+                    </div>
+                  )}
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-saffron hover:bg-saffron-dark disabled:opacity-60 text-white font-semibold font-poppins py-3.5 rounded-full transition-all hover:shadow-lg"
                   >
-                    {isSubmitting ? 'Submitting...' : 'Submit Ticket'}
+                    {isSubmitting ? 'Sending…' : 'Submit Ticket'}
                   </button>
                 </form>
               )}

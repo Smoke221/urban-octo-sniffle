@@ -1,5 +1,5 @@
 // Named imports for the 3 key images
-import heroImg    from '../assets/images/badrali_hero.jpeg';
+import heroImg    from '../assets/images/hero.jpeg';
 import hero2Img   from '../assets/images/badrali_hero2.jpeg';
 import logoImg    from '../assets/images/name_logo.jpeg';
 

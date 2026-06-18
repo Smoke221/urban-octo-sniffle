@@ -31,10 +31,8 @@ const pageVariants = {
 };
 
 function AnimatedRoutes({
-  onJoinClick,
   onTicketClick,
 }: {
-  onJoinClick: () => void;
   onTicketClick: () => void;
 }) {
   const location = useLocation();
@@ -52,7 +50,7 @@ function AnimatedRoutes({
         <Routes location={location}>
           <Route
             path="/"
-            element={<Home onJoinClick={onJoinClick} onTicketClick={onTicketClick} />}
+            element={<Home onTicketClick={onTicketClick} />}
           />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
@@ -78,7 +76,6 @@ export default function App() {
         <Navbar onJoinClick={() => setJoinOpen(true)} />
         <main className="flex-1">
           <AnimatedRoutes
-            onJoinClick={() => setJoinOpen(true)}
             onTicketClick={() => setTicketOpen(true)}
           />
         </main>
