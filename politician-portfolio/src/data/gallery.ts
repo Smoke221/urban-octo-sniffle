@@ -97,7 +97,7 @@ export interface GalleryItem {
 
 // Distribute 60 gallery images across 6 categories (10 each)
 // Alternate ratios for visual variety in the masonry grid
-export const galleryItems: GalleryItem[] = [
+const imageGalleryItems: GalleryItem[] = [
   // ── EVENTS (01–10) ──────────────────────────────────────
   { id: 'g01', type: 'image', src: g01, ratio: '16/9', caption: 'Public Address — Community Event', category: 'events', featured: true },
   { id: 'g02', type: 'image', src: g02, ratio: '4/3',  caption: 'Rally — Raichur District',         category: 'events', featured: true },
@@ -186,6 +186,52 @@ export const galleryItems: GalleryItem[] = [
   { id: 'g79', type: 'image', src: g79, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Badarli with Couples',category: 'community' },
   { id: 'g80', type: 'image', src: g80, ratio: '16/9', caption: 'Samuhika Madive 2026 — Closing Ceremony',    category: 'community' },
 ];
+
+// ── Videos (auto-loaded from assets/videos/) ─────────────────
+const videoModules = Object.entries(
+  import.meta.glob<string>('../assets/videos/*.mp4', { eager: true, import: 'default' }),
+)
+  .filter(([path]) => !/copy/i.test(path))
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
+
+const VIDEO_RATIOS: MediaRatio[] = ['9/16', '16/9', '9/16', '4/3', '16/9', '3/4'];
+const VIDEO_CATEGORIES = [
+  'events',
+  'community',
+  'agriculture',
+  'education',
+  'healthcare',
+  'infrastructure',
+] as const;
+
+function videoCaption(filename: string): string {
+  if (filename.includes('upscaled')) return 'Highlights — Public Address';
+  if (filename.startsWith('VID-20260311')) return 'Community Engagement — March 2026';
+  if (filename.startsWith('VID-20260322')) return 'Field Visit & Outreach — March 2026';
+  if (filename.startsWith('Video-')) return 'Campaign & Public Interaction';
+  return 'Basanagouda Badarli — On Ground';
+}
+
+const videoGalleryItems: GalleryItem[] = videoModules.map(([path, src], index) => {
+  const filename = path.split('/').pop()!.replace('.mp4', '');
+  const isHighlight =
+    filename.includes('upscaled') ||
+    filename.includes('WA0010') ||
+    filename.includes('WA0115') ||
+    filename.includes('Video-120');
+
+  return {
+    id: `v${String(index + 1).padStart(2, '0')}`,
+    type: 'video',
+    src,
+    ratio: VIDEO_RATIOS[index % VIDEO_RATIOS.length]!,
+    caption: videoCaption(filename),
+    category: VIDEO_CATEGORIES[index % VIDEO_CATEGORIES.length]!,
+    featured: isHighlight,
+  };
+});
+
+export const galleryItems: GalleryItem[] = [...imageGalleryItems, ...videoGalleryItems];
 
 export const galleryCategories = [
   'all',
