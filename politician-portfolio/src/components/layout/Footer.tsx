@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Twitter, Facebook, Instagram, Youtube } from 'lucide-react';
 import { logoImg } from '../../data/gallery';
+import {
+  OFFICE_PHONE_DISPLAY,
+  OFFICE_PHONE_TEL,
+  OFFICE_NAME,
+  OFFICE_ADDRESS,
+  MAPS_URL,
+  OFFICE_EMAIL,
+} from '../../data/contact';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
@@ -29,9 +37,11 @@ export default function Footer() {
           {/* Col 1: Bio */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-lg overflow-hidden border border-saffron/40 shrink-0 bg-white/5">
-                <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-contain" />
-              </div>
+              <img
+                src={logoImg}
+                alt="Basanagouda Badarli"
+                className="h-14 w-14 object-contain shrink-0"
+              />
               <div>
                 <p className="font-poppins font-bold text-lg text-white leading-tight">
                   Basanagouda Badarli
@@ -127,21 +137,29 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-300 text-sm font-inter">
                 <MapPin size={16} className="text-saffron mt-0.5 shrink-0" />
-                <span>Jana Spandana Office, Kustagi Road, Basava Nagar, Sindhanur, Raichur District, Karnataka – 584128</span>
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-saffron transition-colors"
+                >
+                  {OFFICE_NAME}
+                  <span className="block text-gray-400 text-xs mt-1">{OFFICE_ADDRESS}</span>
+                </a>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm font-inter">
                 <Phone size={16} className="text-saffron shrink-0" />
-                <a href="tel:+919448000000" className="hover:text-saffron transition-colors">
-                  +91 94480 00000
+                <a href={`tel:${OFFICE_PHONE_TEL}`} className="hover:text-saffron transition-colors">
+                  {OFFICE_PHONE_DISPLAY}
                 </a>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm font-inter">
                 <Mail size={16} className="text-saffron shrink-0" />
                 <a
-                  href="mailto:badarlibasanagouda@gmail.com"
+                  href={`mailto:${OFFICE_EMAIL}`}
                   className="hover:text-saffron transition-colors"
                 >
-                  badarlibasanagouda@gmail.com
+                  {OFFICE_EMAIL}
                 </a>
               </li>
             </ul>

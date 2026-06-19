@@ -63,10 +63,12 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-lg overflow-hidden border border-saffron/40 shrink-0 bg-white/5">
-                <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-contain" />
-              </div>
+            <Link to="/" className="flex items-center gap-3 group">
+              <img
+                src={logoImg}
+                alt="Basanagouda Badarli"
+                className="h-11 w-11 lg:h-14 lg:w-14 object-contain shrink-0"
+              />
               <div className="flex flex-col leading-tight">
                 <span
                   className={`font-poppins font-bold text-base lg:text-lg transition-colors ${
@@ -229,10 +231,12 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
             >
               <div className="inc-strip" />
               <div className="flex items-center justify-between p-5 border-b">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-lg overflow-hidden border border-saffron/40 shrink-0 bg-white/5">
-                    <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-contain" />
-                  </div>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={logoImg}
+                    alt="Basanagouda Badarli"
+                    className="h-11 w-11 object-contain shrink-0"
+                  />
                   <div>
                     <p className="font-poppins font-bold text-navy text-base">Basanagouda Badarli</p>
                     <p className="text-xs text-saffron font-inter">MLC · Karnataka · INC</p>

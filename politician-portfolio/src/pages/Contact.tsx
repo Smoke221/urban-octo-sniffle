@@ -4,6 +4,15 @@ import { MapPin, Phone, Mail, Clock, CheckCircle, AlertCircle } from 'lucide-rea
 import FadeInSection from '../components/ui/FadeInSection';
 import SectionTitle from '../components/ui/SectionTitle';
 import { EMAILJS_TEMPLATES, REPLY_TO_EMAIL, sendFormEmail } from '../lib/emailjs';
+import {
+  OFFICE_PHONE_DISPLAY,
+  OFFICE_PHONE_TEL,
+  OFFICE_NAME,
+  OFFICE_ADDRESS,
+  MAPS_URL,
+  OFFICE_EMAIL,
+  WHATSAPP_URL,
+} from '../data/contact';
 
 interface ContactFormData {
   name: string;
@@ -26,18 +35,23 @@ const categories = [
 const contactDetails = [
   {
     icon: MapPin,
-    title: 'Office Address',
-    lines: ['Jana Spandana Office, Kustagi Road,', 'Basava Nagar, Sindhanur, Raichur District, Karnataka – 584128'],
+    title: 'Office Location',
+    lines: [OFFICE_NAME, OFFICE_ADDRESS],
+    link: MAPS_URL,
   },
   {
     icon: Phone,
-    title: 'Phone',
-    lines: ['+91 94480 00000'],
+    title: 'Phone & WhatsApp',
+    lines: [OFFICE_PHONE_DISPLAY],
+    link: `tel:${OFFICE_PHONE_TEL}`,
+    secondaryLink: WHATSAPP_URL,
+    secondaryLabel: 'Message on WhatsApp',
   },
   {
     icon: Mail,
     title: 'Email',
-    lines: ['badarlibasanagouda@gmail.com'],
+    lines: [OFFICE_EMAIL],
+    link: `mailto:${OFFICE_EMAIL}`,
   },
   {
     icon: Clock,
@@ -112,8 +126,44 @@ export default function Contact() {
                       <div>
                         <p className="font-poppins font-semibold text-navy text-sm mb-1">{detail.title}</p>
                         {detail.lines.map((line, i) => (
-                          <p key={i} className="text-gray-500 font-inter text-sm">{line}</p>
+                          <p key={i} className="text-gray-500 font-inter text-sm">
+                            {'link' in detail && detail.link && detail.title === 'Phone & WhatsApp' ? (
+                              <a href={detail.link} className="hover:text-saffron transition-colors">
+                                {line}
+                              </a>
+                            ) : (
+                              line
+                            )}
+                          </p>
                         ))}
+                        {'link' in detail && detail.link && detail.title === 'Office Location' && (
+                          <a
+                            href={detail.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-1.5 text-saffron text-xs font-inter font-semibold hover:underline"
+                          >
+                            Open in Google Maps →
+                          </a>
+                        )}
+                        {'link' in detail && detail.link && detail.title === 'Email' && (
+                          <a
+                            href={detail.link}
+                            className="inline-block mt-1.5 text-saffron text-xs font-inter font-semibold hover:underline"
+                          >
+                            Send email →
+                          </a>
+                        )}
+                        {'secondaryLink' in detail && detail.secondaryLink && (
+                          <a
+                            href={detail.secondaryLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-1.5 text-[#25D366] text-xs font-inter font-semibold hover:underline"
+                          >
+                            {detail.secondaryLabel}
+                          </a>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -123,10 +173,10 @@ export default function Contact() {
                 <div className="mt-8 rounded-2xl overflow-hidden border border-gray-200">
                   <div className="h-56 bg-gradient-to-br from-navy to-navy-light flex flex-col items-center justify-center text-center p-6">
                     <MapPin size={32} className="text-saffron mb-3" />
-                    <p className="font-poppins font-semibold text-white text-sm mb-1">Sindhanur, Raichur</p>
-                    <p className="text-gray-400 text-xs font-inter">Karnataka, India</p>
+                    <p className="font-poppins font-semibold text-white text-sm mb-1">{OFFICE_NAME}</p>
+                    <p className="text-gray-400 text-xs font-inter">{OFFICE_ADDRESS}</p>
                     <a
-                      href="https://maps.google.com/?q=Sindhanur,Raichur,Karnataka"
+                      href={MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-4 text-xs text-saffron hover:text-saffron-light font-inter underline"

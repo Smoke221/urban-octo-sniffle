@@ -15,6 +15,7 @@ import Footer from './components/layout/Footer';
 import ScrollingBanner from './components/ui/ScrollingBanner';
 import JoinCommunityModal from './components/modals/JoinCommunityModal';
 import RaiseTicketModal from './components/modals/RaiseTicketModal';
+import WhatsAppButton from './components/ui/WhatsAppButton';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -89,6 +90,7 @@ export default function App() {
 
       <JoinCommunityModal open={joinOpen} onClose={() => setJoinOpen(false)} />
       <RaiseTicketModal open={ticketOpen} onClose={() => setTicketOpen(false)} />
+      <WhatsAppButton />
     </BrowserRouter>
   );
 }
