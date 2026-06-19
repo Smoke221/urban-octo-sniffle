@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Twitter, Facebook, Instagram, Youtube } from 'lucide-react';
-import logoImg from '../../assets/images/name_logo.jpeg';
+import { logoImg } from '../../data/gallery';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
@@ -29,8 +29,8 @@ export default function Footer() {
           {/* Col 1: Bio */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-saffron/40 shrink-0">
-                <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-cover object-top" />
+              <div className="w-12 h-12 rounded-lg overflow-hidden border border-saffron/40 shrink-0 bg-white/5">
+                <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-contain" />
               </div>
               <div>
                 <p className="font-poppins font-bold text-lg text-white leading-tight">

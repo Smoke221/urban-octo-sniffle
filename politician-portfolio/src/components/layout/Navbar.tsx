@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Twitter, Facebook, Instagram, Youtube, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoImg from '../../assets/images/name_logo.jpeg';
+import { logoImg } from '../../data/gallery';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -64,8 +64,8 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-saffron/40 shrink-0">
-                <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-cover object-top" />
+              <div className="w-9 h-9 rounded-lg overflow-hidden border border-saffron/40 shrink-0 bg-white/5">
+                <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col leading-tight">
                 <span
@@ -230,8 +230,8 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
               <div className="inc-strip" />
               <div className="flex items-center justify-between p-5 border-b">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-saffron/40 shrink-0">
-                    <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-cover object-top" />
+                  <div className="w-9 h-9 rounded-lg overflow-hidden border border-saffron/40 shrink-0 bg-white/5">
+                    <img src={logoImg} alt="Basanagouda Badarli" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <p className="font-poppins font-bold text-navy text-base">Basanagouda Badarli</p>

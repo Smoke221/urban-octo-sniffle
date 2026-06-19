@@ -425,25 +425,22 @@ export default function Home({
             />
           </FadeInSection>
 
-          {/* Desktop horizontal scroll timeline */}
-          <div className="hidden md:block relative mt-8">
-            {/* Gold line */}
-            <div className="absolute top-8 left-0 right-0 h-0.5 bg-gold/30" />
-            <div className="flex gap-0 overflow-x-auto pb-4 snap-x snap-mandatory timeline-scroll">
+          {/* Horizontal timeline — all screen sizes */}
+          <div className="relative mt-10">
+            <div className="absolute top-10 left-0 right-0 h-0.5 bg-gold/30 hidden sm:block" />
+            <div className="flex gap-5 overflow-x-auto overflow-y-hidden pb-5 snap-x snap-mandatory timeline-scroll -mx-4 px-4 sm:mx-0 sm:px-0">
               {achievements.map((item, idx) => (
-                <FadeInSection key={item.id} delay={idx * 0.08} className="shrink-0 w-56 snap-start">
-                  <div className="relative pt-16 pr-4">
-                    {/* Dot */}
-                    <div className="absolute top-5 left-0 w-6 h-6 rounded-full bg-saffron border-4 border-navy shadow-lg shadow-saffron/30 z-10" />
-                    {/* Year badge */}
-                    <span className="absolute top-0 left-0 bg-saffron text-white text-xs font-bold font-inter px-2.5 py-1 rounded-full">
+                <FadeInSection key={item.id} delay={idx * 0.08} className="shrink-0 w-[280px] sm:w-72 lg:w-80 snap-start">
+                  <div className="relative pt-[4.5rem] pr-2 sm:pr-4">
+                    <div className="absolute top-7 left-0 w-7 h-7 rounded-full bg-saffron border-4 border-navy shadow-lg shadow-saffron/30 z-10 hidden sm:block" />
+                    <span className="absolute top-0 left-0 bg-saffron text-white text-sm font-bold font-inter px-3 py-1.5 rounded-full">
                       {item.year}
                     </span>
-                    <div className="bg-navy-light border border-white/10 rounded-xl p-4">
-                      <h4 className="font-poppins font-semibold text-white text-sm leading-snug mb-2">
+                    <div className="bg-navy-light border border-white/10 rounded-xl p-5 min-h-[140px]">
+                      <h4 className="font-poppins font-semibold text-white text-base leading-snug mb-2.5">
                         {item.title}
                       </h4>
-                      <p className="text-gray-400 text-xs font-inter leading-relaxed line-clamp-3">
+                      <p className="text-gray-400 text-sm font-inter leading-relaxed line-clamp-4">
                         {item.description}
                       </p>
                     </div>
@@ -451,24 +448,6 @@ export default function Home({
                 </FadeInSection>
               ))}
             </div>
-          </div>
-
-          {/* Mobile vertical timeline */}
-          <div className="md:hidden mt-8 space-y-6 relative before:absolute before:left-5 before:top-0 before:bottom-0 before:w-0.5 before:bg-gold/30">
-            {achievements.map((item, idx) => (
-              <FadeInSection key={item.id} delay={idx * 0.06}>
-                <div className="flex gap-4 pl-12 relative">
-                  <div className="absolute left-3 top-1 w-4 h-4 rounded-full bg-saffron border-2 border-navy" />
-                  <div className="bg-navy-light border border-white/10 rounded-xl p-4 flex-1">
-                    <span className="inline-block bg-saffron text-white text-xs font-bold font-inter px-2 py-0.5 rounded-full mb-2">
-                      {item.year}
-                    </span>
-                    <h4 className="font-poppins font-semibold text-white text-sm mb-1">{item.title}</h4>
-                    <p className="text-gray-400 text-xs font-inter leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              </FadeInSection>
-            ))}
           </div>
         </div>
       </section>
