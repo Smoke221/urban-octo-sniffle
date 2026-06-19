@@ -145,7 +145,7 @@ export default function Home({
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[calc(4px+4rem+3rem)] sm:pt-[calc(4px+4rem+3.5rem)] lg:pt-[calc(4px+5rem+4rem)] pb-24 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div>

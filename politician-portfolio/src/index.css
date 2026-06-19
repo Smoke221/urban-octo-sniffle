@@ -52,6 +52,22 @@ h1, h2, h3, h4, h5, h6 {
   animation-play-state: paused;
 }
 
+/* Scrolling image banner — gapless seamless loop */
+@keyframes banner-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.banner-marquee-track {
+  animation: banner-marquee 30s linear infinite;
+  width: max-content;
+  will-change: transform;
+}
+
+.banner-marquee:hover .banner-marquee-track {
+  animation-play-state: paused;
+}
+
 /* Custom scrollbar — global */
 ::-webkit-scrollbar {
   width: 6px;

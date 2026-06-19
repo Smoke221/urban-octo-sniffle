@@ -12,6 +12,7 @@ function ScrollToTop() {
 
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import ScrollingBanner from './components/ui/ScrollingBanner';
 import JoinCommunityModal from './components/modals/JoinCommunityModal';
 import RaiseTicketModal from './components/modals/RaiseTicketModal';
 
@@ -36,9 +37,12 @@ function AnimatedRoutes({
   onTicketClick: () => void;
 }) {
   const location = useLocation();
+  const isHome = location.pathname === '/';
 
   return (
-    <AnimatePresence mode="wait">
+    <>
+      {isHome && <ScrollingBanner />}
+      <AnimatePresence mode="wait">
       <motion.div
         key={location.pathname}
         variants={pageVariants}
@@ -62,6 +66,7 @@ function AnimatedRoutes({
         </Routes>
       </motion.div>
     </AnimatePresence>
+    </>
   );
 }
 
