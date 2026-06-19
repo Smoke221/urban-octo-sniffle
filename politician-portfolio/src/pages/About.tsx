@@ -2,7 +2,8 @@ import FadeInSection, { StaggerContainer, StaggerItem } from '../components/ui/F
 import { heroImg, hero2Img } from '../data/gallery';
 import SectionTitle from '../components/ui/SectionTitle';
 import { achievements } from '../data/achievements';
-import { MapPin, Users, Award, GraduationCap } from 'lucide-react';
+import { schoolEducation, collegeEducation, educationQualification } from '../data/education';
+import { MapPin, Users, Award, GraduationCap, School, Building2 } from 'lucide-react';
 
 const quickFacts = [
   { label: 'Party', value: 'Indian National Congress (INC)' },
@@ -147,6 +148,107 @@ export default function About() {
         </div>
       </section>
 
+      {/* Education Journey */}
+      <section className="py-16 bg-surface border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeInSection>
+            <SectionTitle
+              tag="Education"
+              title="Schooling &"
+              titleHighlight="College Journey"
+              subtitle="From Badarli village schools to college in Bellary and Sindhanur — the academic path that shaped Basanagouda Badarli's early years."
+              center
+            />
+          </FadeInSection>
+
+          <div className="mt-10 grid lg:grid-cols-5 gap-8">
+            {/* School timeline */}
+            <FadeInSection className="lg:col-span-3">
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-full">
+                <div className="flex items-center gap-3 px-6 py-4 bg-navy border-b border-white/10">
+                  <div className="w-10 h-10 rounded-xl bg-saffron/20 flex items-center justify-center">
+                    <School size={20} className="text-saffron" />
+                  </div>
+                  <div>
+                    <h3 className="font-poppins font-bold text-white text-base">School Education</h3>
+                    <p className="text-gray-400 text-xs font-inter">Classes 1 through 10</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="relative space-y-0">
+                    {schoolEducation.map((entry, idx) => (
+                      <div
+                        key={entry.grades}
+                        className={`relative flex gap-4 pb-6 last:pb-0 ${
+                          idx < schoolEducation.length - 1
+                            ? 'before:absolute before:left-[11px] before:top-6 before:bottom-0 before:w-0.5 before:bg-saffron/25'
+                            : ''
+                        }`}
+                      >
+                        <div className="relative z-10 w-6 h-6 rounded-full bg-saffron border-2 border-white shadow shrink-0 mt-0.5" />
+                        <div className="flex-1 min-w-0 pb-1">
+                          <span className="inline-block bg-saffron/10 text-saffron text-xs font-bold font-inter px-2.5 py-1 rounded-full mb-2">
+                            {entry.grades}
+                          </span>
+                          <p className="font-poppins font-semibold text-navy text-sm leading-snug">
+                            {entry.school ?? entry.location}
+                          </p>
+                          {entry.school && (
+                            <p className="text-gray-500 text-xs font-inter mt-1 flex items-center gap-1">
+                              <MapPin size={12} className="text-saffron shrink-0" />
+                              {entry.location}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* College + qualification */}
+            <FadeInSection direction="right" className="lg:col-span-2 flex flex-col gap-6">
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex-1">
+                <div className="flex items-center gap-3 px-6 py-4 bg-navy border-b border-white/10">
+                  <div className="w-10 h-10 rounded-xl bg-saffron/20 flex items-center justify-center">
+                    <Building2 size={20} className="text-saffron" />
+                  </div>
+                  <div>
+                    <h3 className="font-poppins font-bold text-white text-base">College</h3>
+                    <p className="text-gray-400 text-xs font-inter">Higher education</p>
+                  </div>
+                </div>
+                <div className="p-6 space-y-4">
+                  {collegeEducation.map(entry => (
+                    <div
+                      key={entry.location}
+                      className="flex items-center gap-4 p-4 rounded-xl bg-surface border border-gray-100"
+                    >
+                      <div className="w-11 h-11 rounded-xl bg-navy/5 flex items-center justify-center shrink-0">
+                        <GraduationCap size={20} className="text-navy" />
+                      </div>
+                      <div>
+                        <p className="font-poppins font-semibold text-navy text-sm">{entry.location}</p>
+                        {entry.note && (
+                          <p className="text-gray-500 text-xs font-inter mt-0.5">{entry.note}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-saffron to-saffron-dark rounded-2xl p-6 text-white shadow-lg">
+                <GraduationCap size={28} className="mb-3 opacity-90" />
+                <p className="text-xs font-inter uppercase tracking-widest opacity-80 mb-1">Qualification</p>
+                <p className="font-poppins font-bold text-xl">{educationQualification}</p>
+              </div>
+            </FadeInSection>
+          </div>
+        </div>
+      </section>
+
       {/* Political Lineage */}
       <section className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +266,7 @@ export default function About() {
               { icon: MapPin, label: 'Hometown', value: 'Post Badarli, Sindhanur, Raichur District — a farming village where his roots run deep' },
               { icon: Users, label: 'Political Family', value: 'Son of Veeranagouda Badarli; brother Somanagouda Badarli is a RDCC Director' },
               { icon: Award, label: 'Cooperative Leadership', value: 'President of Krushi Mitra Vividoddesh Souhardha Sahakari Sangh, Sindhanur (2017–present)' },
-              { icon: GraduationCap, label: 'Education & Foundation', value: 'B.Com graduate; founded BB Foundation in 2018 for mass welfare programs across Kalyana Karnataka' },
+              { icon: GraduationCap, label: 'Education & Foundation', value: 'B.Com graduate; schooled in Badarli, Sindhanur & Bellary; founded BB Foundation in 2018' },
             ].map(item => (
               <StaggerItem key={item.label}>
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
