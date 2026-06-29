@@ -171,7 +171,7 @@ const imageGalleryItems: GalleryItem[] = [
   { id: 'g64', type: 'image', src: g64, ratio: '3/4',  caption: 'Samuhika Madive 2026 — Blessings Ceremony',  category: 'community' },
   { id: 'g65', type: 'image', src: g65, ratio: '16/9', caption: 'Samuhika Madive 2026 — DCM Shivakumar Presides', category: 'community', featured: true },
   { id: 'g66', type: 'image', src: g66, ratio: '4/3',  caption: 'Samuhika Madive 2026 — Public Gathering',    category: 'community' },
-  { id: 'g67', type: 'image', src: g67, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Badarli Addresses Crowd', category: 'community' },
+  { id: 'g67', type: 'image', src: g67, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Basanagouda Badarli Addresses Crowd', category: 'community' },
   { id: 'g68', type: 'image', src: g68, ratio: '3/4',  caption: 'Samuhika Madive 2026 — Cultural Programme',  category: 'community' },
   { id: 'g69', type: 'image', src: g69, ratio: '16/9', caption: 'Samuhika Madive 2026 — Sindhanur Event',     category: 'community' },
   { id: 'g70', type: 'image', src: g70, ratio: '4/3',  caption: 'Samuhika Madive 2026 — BB Foundation',       category: 'community' },
@@ -183,7 +183,7 @@ const imageGalleryItems: GalleryItem[] = [
   { id: 'g76', type: 'image', src: g76, ratio: '3/4',  caption: 'Samuhika Madive 2026 — Reception',           category: 'community' },
   { id: 'g77', type: 'image', src: g77, ratio: '16/9', caption: 'Samuhika Madive 2026 — Crowd View',          category: 'community' },
   { id: 'g78', type: 'image', src: g78, ratio: '4/3',  caption: 'Samuhika Madive 2026 — Event Overview',      category: 'community' },
-  { id: 'g79', type: 'image', src: g79, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Badarli with Couples',category: 'community' },
+  { id: 'g79', type: 'image', src: g79, ratio: '1/1',  caption: 'Samuhika Madive 2026 — Basanagouda Badarli with Couples',category: 'community' },
   { id: 'g80', type: 'image', src: g80, ratio: '16/9', caption: 'Samuhika Madive 2026 — Closing Ceremony',    category: 'community' },
 ];
 

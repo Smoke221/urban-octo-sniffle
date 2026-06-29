@@ -92,7 +92,7 @@ export default function About() {
                     Secretary of the KPCC (Karnataka Pradesh Congress Committee) since 2022.
                   </p>
                   <p>
-                    In 2018, Badarli founded the Basanagouda Badarli (BB) Foundation to
+                    In 2018, Basanagouda Badarli founded the Basanagouda Badarli (BB) Foundation to
                     institutionalize his social service work. The foundation has organized mass
                     marriage ceremonies (51 couples in 2023, 72 in 2025, 5001 in 2026), free health
                     camps, job fairs, and annual Dasoha Seva programs for Srishaila pilgrims. During
@@ -101,7 +101,7 @@ export default function About() {
                     ill patients — at no charge.
                   </p>
                   <p>
-                    In early 2024, Badarli was elected to the Karnataka Legislative Council via the
+                    In early 2024, Basanagouda Badarli was elected to the Karnataka Legislative Council via the
                     Legislative Assembly quota. On May 3, 2026 — marking exactly one year as MLC —
                     he hosted a landmark Samuhika Madive (mass marriage) for 5001 couples in
                     Sindhanur, attended by Deputy Chief Minister D.K. Shivakumar. He has delivered

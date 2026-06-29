@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
     location: 'Sindhanur Taluk, Raichur',
     role: 'Farmer',
     quote:
-      'Badarli sir fought for our water rights from the Tungabhadra canal for years. When the dam gates were finally approved for replacement, we felt relief. He never forgot the tail-end farmers like us.',
+      'Basanagouda Badarli sir fought for our water rights from the Tungabhadra canal for years. When the dam gates were finally approved for replacement, we felt relief. He never forgot the tail-end farmers like us.',
     rating: 5,
   },
   {
@@ -24,7 +24,7 @@ export const testimonials: Testimonial[] = [
     location: 'Manvi, Raichur District',
     role: 'Schoolteacher',
     quote:
-      'The inauguration of the Sainik School in Sindhanur is a dream come true for our children. Students from poor families now have access to quality education. Badarli sir made this possible.',
+      'The inauguration of the Sainik School in Sindhanur is a dream come true for our children. Students from poor families now have access to quality education. Basanagouda Badarli sir made this possible.',
     rating: 5,
   },
   {
@@ -33,7 +33,7 @@ export const testimonials: Testimonial[] = [
     location: 'Raichur City',
     role: 'Small Business Owner',
     quote:
-      'During COVID, Badarli\'s oxygen kit distribution saved lives in our area. He came personally to check on affected families. That kind of leadership is rare. He truly is the "Janara Mechina Nayaka."',
+      'During COVID, Basanagouda Badarli\'s oxygen kit distribution saved lives in our area. He came personally to check on affected families. That kind of leadership is rare. He truly is the "Janara Mechina Nayaka."',
     rating: 5,
   },
   {
@@ -60,7 +60,7 @@ export const testimonials: Testimonial[] = [
     location: 'Sindhanur Town',
     role: 'Medical Professional',
     quote:
-      'The push for a 50-bed critical care unit is a game-changer. Patients who would have died on the way to Hubli can now get emergency treatment right here. Badarli sir\'s dedication to healthcare is commendable.',
+      'The push for a 50-bed critical care unit is a game-changer. Patients who would have died on the way to Hubli can now get emergency treatment right here. Basanagouda Badarli sir\'s dedication to healthcare is commendable.',
     rating: 5,
   },
   {
@@ -78,7 +78,7 @@ export const testimonials: Testimonial[] = [
     location: 'Sindhanur City',
     role: 'Youth Congress Volunteer',
     quote:
-      'I started as an NSUI volunteer in 2012 inspired by Badarli sir. He taught us that service comes before politics. The values he instilled — integrity, hard work, and helping others — shape everything I do even today.',
+      'I started as an NSUI volunteer in 2012 inspired by Basanagouda Badarli sir. He taught us that service comes before politics. The values he instilled — integrity, hard work, and helping others — shape everything I do even today.',
     rating: 5,
   },
   {
@@ -87,7 +87,7 @@ export const testimonials: Testimonial[] = [
     location: 'Manvi Taluk, Raichur',
     role: 'BB Foundation Beneficiary',
     quote:
-      'My daughter was married through the Samuhika Madive organized by Badarli sir\'s BB Foundation. Without his program, we could never have afforded a proper wedding. He gave our family dignity we could not have given ourselves. We are forever grateful.',
+      'My daughter was married through the Samuhika Madive organized by Basanagouda Badarli sir\'s BB Foundation. Without his program, we could never have afforded a proper wedding. He gave our family dignity we could not have given ourselves. We are forever grateful.',
     rating: 5,
   },
   {
@@ -96,7 +96,7 @@ export const testimonials: Testimonial[] = [
     location: 'Sindhanur Taluk',
     role: 'Cooperative Society Member',
     quote:
-      'As a member of the Krushi Mitra cooperative that Badarli sir leads, I have seen how he fights for farmers in meetings and policy discussions. He is not just a politician — he is a farmer himself and he understands our daily struggles on the ground.',
+      'As a member of the Krushi Mitra cooperative that Basanagouda Badarli sir leads, I have seen how he fights for farmers in meetings and policy discussions. He is not just a politician — he is a farmer himself and he understands our daily struggles on the ground.',
     rating: 5,
   },
 ];

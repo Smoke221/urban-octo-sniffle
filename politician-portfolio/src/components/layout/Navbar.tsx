@@ -195,7 +195,7 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
                 onClick={onJoinClick}
                 className="bg-saffron hover:bg-saffron-dark text-white text-sm font-semibold font-poppins px-5 py-2 rounded-full transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
-                Join Community
+                Join Us
               </button>
             </div>
 
@@ -288,7 +288,7 @@ export default function Navbar({ onJoinClick }: { onJoinClick: () => void }) {
                   onClick={() => { onJoinClick(); setMobileOpen(false); }}
                   className="w-full bg-saffron hover:bg-saffron-dark text-white font-semibold font-poppins py-3 rounded-full transition-all"
                 >
-                  Join Community
+                  Join Us
                 </button>
                 <div className="flex justify-center gap-4 mt-4">
                   <a href="https://x.com/Basanagouda99" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-saffron">

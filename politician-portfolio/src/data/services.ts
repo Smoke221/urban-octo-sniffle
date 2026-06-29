@@ -19,7 +19,7 @@ export const services: Service[] = [
     icon: 'Wheat',
     shortDescription: 'Supporting sustainable farming and ensuring water rights for tail-end farmers in Raichur.',
     fullDescription:
-      'Coming from a family with deep agricultural roots, Badarli views farming as the backbone of the Raichur economy. He consistently champions the rights of farmers, particularly those who depend on the Tungabhadra Left Bank Canal for paddy cultivation.',
+      'Coming from a family with deep agricultural roots, Basanagouda Badarli views farming as the backbone of the Raichur economy. He consistently champions the rights of farmers, particularly those who depend on the Tungabhadra Left Bank Canal for paddy cultivation.',
     highlights: [
       'Irrigation Advocacy: Regularly raises issues regarding the Tungabhadra Left Bank Canal (TLBC) to ensure tail-end farmers receive fair water share.',
       'Tungabhadra Dam Security: Successfully pushed for government commitment to replace 33 crest gates at the Tungabhadra Dam (completion by June 2026), ensuring water security for lakhs of farmers.',
@@ -37,7 +37,7 @@ export const services: Service[] = [
     icon: 'GraduationCap',
     shortDescription: 'Building future leaders through academic reform, digital literacy, and defense education.',
     fullDescription:
-      'Education is the cornerstone of Badarli\'s political agenda. He believes in creating future leaders through both academic and systemic reform, from rural schools to state-level policy.',
+      'Education is the cornerstone of Basanagouda Badarli\'s political agenda. He believes in creating future leaders through both academic and systemic reform, from rural schools to state-level policy.',
     highlights: [
       'Student Union Revival: Serves on a high-level 11-member government committee to reintroduce student union elections in Karnataka after a 37-year hiatus.',
       'Sainik School in Sindhanur (2026): Instrumental in the successful establishment and inauguration of the Sainik School in Sindhanur — providing defense-oriented education to rural students.',
@@ -55,7 +55,7 @@ export const services: Service[] = [
     icon: 'HeartPulse',
     shortDescription: 'Accessible medical care, trauma centers and rural health upgrades for Raichur region.',
     fullDescription:
-      'Badarli focuses on bridging the gap in specialized medical care for the Kalyana-Karnataka region. His efforts have brought critical care infrastructure to a region that previously had to rely on distant cities like Hubli or Bengaluru for emergency services.',
+      'Basanagouda Badarli focuses on bridging the gap in specialized medical care for the Kalyana-Karnataka region. His efforts have brought critical care infrastructure to a region that previously had to rely on distant cities like Hubli or Bengaluru for emergency services.',
     highlights: [
       'Trauma Care Center: Secured ₹3 crore for construction of a dedicated Trauma Care Center at the Sindhanur Taluk Public Hospital.',
       '50-Bed Critical Care Unit: Successfully lobbied for a 50-bed critical care unit in the region to handle emergencies and reduce travel for residents.',
@@ -73,7 +73,7 @@ export const services: Service[] = [
     icon: 'Shield',
     shortDescription: 'Modernizing police infrastructure and fostering community policing in Sindhanur-Raichur.',
     fullDescription:
-      'Badarli emphasizes a collaborative relationship between the public and the police to maintain law and order. He supports modernization of police infrastructure while advocating for transparent and fair treatment of personnel.',
+      'Basanagouda Badarli emphasizes a collaborative relationship between the public and the police to maintain law and order. He supports modernization of police infrastructure while advocating for transparent and fair treatment of personnel.',
     highlights: [
       'Infrastructure Modernization: Supported development of better infrastructure for local police stations, including improved staff quarters.',
       'Digital Record-Keeping: Promoted implementation of digital record-keeping systems in police stations.',
@@ -91,13 +91,13 @@ export const services: Service[] = [
     icon: 'ScrollText',
     shortDescription: 'Fighting for Sindhanur\'s district status to bring governance closer to the people.',
     fullDescription:
-      'His most significant contribution in this sector is his ongoing fight for administrative decentralization. Badarli is a leading voice in the movement to make Sindhanur a separate district, arguing it would simplify land records and grievance redressal for rural citizens.',
+      'His most significant contribution in this sector is his ongoing fight for administrative decentralization. Basanagouda Badarli is a leading voice in the movement to make Sindhanur a separate district, arguing it would simplify land records and grievance redressal for rural citizens.',
     highlights: [
       'Sindhanur District Demand: Leading voice in the movement to make Sindhanur a separate district — successfully moved the proposal to the "feasibility report" stage with the State Revenue Department.',
       'CM Petition: Personally petitioned CM Siddaramaiah and DCM D.K. Shivakumar for the district formation.',
       'Sakal Services: Works to ensure timed government services reach the rural poor without middleman interference.',
       'Jan Spandana Office: Operates a "Jana Spandana" (People\'s Pulse) office in Sindhanur for direct citizen grievance redressal.',
-      'Regional Commissioner Report: State Revenue Minister has requested a feasibility report following Badarli\'s advocacy.',
+      'Regional Commissioner Report: State Revenue Minister has requested a feasibility report following Basanagouda Badarli\'s advocacy.',
     ],
     color: 'bg-yellow-50 border-yellow-200',
   },
@@ -109,7 +109,7 @@ export const services: Service[] = [
     icon: 'Building2',
     shortDescription: 'Connecting villages, improving roads and modernizing Sindhanur\'s urban amenities.',
     fullDescription:
-      'Badarli has prioritized physical connectivity and urban development as enablers of economic growth. His infrastructure work ranges from village link roads to urban amenity upgrades in Sindhanur city.',
+      'Basanagouda Badarli has prioritized physical connectivity and urban development as enablers of economic growth. His infrastructure work ranges from village link roads to urban amenity upgrades in Sindhanur city.',
     highlights: [
       '₹400 Crore Water Project: Secured significant funding for the Jawalagera drinking water project.',
       'State Highways: Prioritized development of state highways and village link roads in Raichur district.',

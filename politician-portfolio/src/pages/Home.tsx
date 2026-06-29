@@ -603,7 +603,7 @@ export default function Home({
               tag="Testimonials"
               title="What People of"
               titleHighlight="Karnataka Say"
-              subtitle="Words from the farmers, students, and citizens Badarli has served."
+              subtitle="Words from the farmers, students, and citizens Basanagouda Badarli has served."
               center
             />
           </FadeInSection>

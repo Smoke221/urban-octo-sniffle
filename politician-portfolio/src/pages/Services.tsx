@@ -36,7 +36,7 @@ export default function Services() {
               tag="All Services"
               title="Our Areas of"
               titleHighlight="Service"
-              subtitle="Click on any service to learn more about Badarli's work and initiatives in that area."
+              subtitle="Click on any service to learn more about Basanagouda Badarli's work and initiatives in that area."
               center
             />
           </FadeInSection>

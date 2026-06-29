@@ -34,7 +34,7 @@ export default function JoinCommunityModal({ open, onClose }: JoinCommunityModal
         from_phone: data.phone,
         district: data.district,
         message: data.message || '(No message provided)',
-        form_source: 'Join Community Modal',
+        form_source: 'Join Us Modal',
         reply_to: REPLY_TO_EMAIL,
       });
       setSubmitted(true);
@@ -172,7 +172,7 @@ export default function JoinCommunityModal({ open, onClose }: JoinCommunityModal
                   </div>
 
                   <p className="text-xs text-gray-400 font-inter">
-                    By joining, you agree to receive updates about Badarli's work and events. Your
+                    By joining, you agree to receive updates about Basanagouda Badarli's work and events. Your
                     information will not be shared with third parties.
                   </p>
 
@@ -188,7 +188,7 @@ export default function JoinCommunityModal({ open, onClose }: JoinCommunityModal
                     disabled={isSubmitting}
                     className="w-full bg-saffron hover:bg-saffron-dark disabled:opacity-60 text-white font-semibold font-poppins py-3.5 rounded-full transition-all hover:shadow-lg"
                   >
-                    {isSubmitting ? 'Sending…' : 'Join Community'}
+                    {isSubmitting ? 'Sending…' : 'Join Us'}
                   </button>
                 </form>
               )}

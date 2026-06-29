@@ -16,9 +16,9 @@ export const newsItems: NewsItem[] = [
     date: 'May 3, 2026',
     category: 'Social Service',
     excerpt:
-      'Marking one year as MLC, Badarli organized a historic mass marriage for 5001 couples in Sindhanur — attended by Deputy Chief Minister D.K. Shivakumar, making it the largest such event in North Karnataka\'s recent history.',
+      'Marking one year as MLC, Basanagouda Badarli organized a historic mass marriage for 5001 couples in Sindhanur — attended by Deputy Chief Minister D.K. Shivakumar, making it the largest such event in North Karnataka\'s recent history.',
     content:
-      'On May 3, 2026, marking exactly one year as MLC, Basanagouda Badarli organized a landmark Samuhika Madive (mass marriage) for 5001 couples in Sindhanur, Raichur district. The event was graced by Deputy Chief Minister D.K. Shivakumar as the chief guest, reflecting the political weight Badarli commands in North Karnataka. Organized through the BB Foundation, the ceremony provided couples from economically weaker backgrounds a dignified, cost-free wedding. This is the latest in a series of mass marriage events: 51 couples in 2023, 72 in 2025, and now a historic 5001 in 2026 — cementing the BB Foundation\'s reputation as Kalyana Karnataka\'s most impactful social service organization.',
+      'On May 3, 2026, marking exactly one year as MLC, Basanagouda Badarli organized a landmark Samuhika Madive (mass marriage) for 5001 couples in Sindhanur, Raichur district. The event was graced by Deputy Chief Minister D.K. Shivakumar as the chief guest, reflecting the political weight Basanagouda Badarli commands in North Karnataka. Organized through the BB Foundation, the ceremony provided couples from economically weaker backgrounds a dignified, cost-free wedding. This is the latest in a series of mass marriage events: 51 couples in 2023, 72 in 2025, and now a historic 5001 in 2026 — cementing the BB Foundation\'s reputation as Kalyana Karnataka\'s most impactful social service organization.',
     isTicker: true,
   },
   {
@@ -27,7 +27,7 @@ export const newsItems: NewsItem[] = [
     date: 'May 2026',
     category: 'Infrastructure',
     excerpt:
-      'Completing one year in the Karnataka Legislative Council, Badarli has delivered ₹42 crore in sanctioned development works for Sindhanur — roads, drainage, healthcare, and schools.',
+      'Completing one year in the Karnataka Legislative Council, Basanagouda Badarli has delivered ₹42 crore in sanctioned development works for Sindhanur — roads, drainage, healthcare, and schools.',
     content:
       'Marking one year in the Karnataka Legislative Council, Basanagouda Badarli has secured over ₹42 crore in sanctioned development works for Sindhanur constituency. Key achievements include 134+ road repairs, the Indira Rejuvenation Trauma Care Center (₹3 crore), a 24/7 drinking water supply project worth ₹1.80 crore, and a ₹340 crore CMSF campus project. The works span agriculture, healthcare, education, and urban development — fulfilling promises made at the time of his election to the MLC seat in 2024.',
     isTicker: true,
@@ -38,9 +38,9 @@ export const newsItems: NewsItem[] = [
     date: 'April 4, 2026',
     category: 'Education',
     excerpt:
-      'Badarli participated in the high-profile inauguration of the Sainik School in Sindhanur, attended by Union Minister H.D. Kumaraswamy and Defence MoS Sanjay Seth.',
+      'Basanagouda Badarli participated in the high-profile inauguration of the Sainik School in Sindhanur, attended by Union Minister H.D. Kumaraswamy and Defence MoS Sanjay Seth.',
     content:
-      'Badarli participated in the high-profile inauguration of the new Sainik School in Sindhanur, Raichur district. The event was attended by Union Minister H.D. Kumaraswamy and Union Minister of State for Defence Sanjay Seth. This project marks a major step in bringing defense-oriented education to rural North Karnataka — a goal that Badarli has supported for years.',
+      'Basanagouda Badarli participated in the high-profile inauguration of the new Sainik School in Sindhanur, Raichur district. The event was attended by Union Minister H.D. Kumaraswamy and Union Minister of State for Defence Sanjay Seth. This project marks a major step in bringing defense-oriented education to rural North Karnataka — a goal that Basanagouda Badarli has supported for years.',
     isTicker: true,
   },
   {
@@ -49,9 +49,9 @@ export const newsItems: NewsItem[] = [
     date: 'March 2026',
     category: 'Administration',
     excerpt:
-      'Badarli has officially renewed his commitment to making Sindhanur a separate district. The State Revenue Minister has already requested a feasibility report from the Regional Commissioner.',
+      'Basanagouda Badarli has officially renewed his commitment to making Sindhanur a separate district. The State Revenue Minister has already requested a feasibility report from the Regional Commissioner.',
     content:
-      'Badarli has officially renewed his commitment to making Sindhanur a separate district. He recently chaired a preparatory meeting at the Town Hall in Sindhanur with the "Sindhanur District Struggle Committee." The State Revenue Minister has already requested a feasibility report from the Regional Commissioner. Badarli has personally petitioned CM Siddaramaiah and DCM D.K. Shivakumar on this matter.',
+      'Basanagouda Badarli has officially renewed his commitment to making Sindhanur a separate district. He recently chaired a preparatory meeting at the Town Hall in Sindhanur with the "Sindhanur District Struggle Committee." The State Revenue Minister has already requested a feasibility report from the Regional Commissioner. Basanagouda Badarli has personally petitioned CM Siddaramaiah and DCM D.K. Shivakumar on this matter.',
     isTicker: true,
   },
   {
@@ -60,9 +60,9 @@ export const newsItems: NewsItem[] = [
     date: 'March 31, 2026',
     category: 'Agriculture',
     excerpt:
-      'At his Jana Spandana office, Badarli presided over the distribution of borewell equipment to local farmers. Over 155 borewells were sanctioned with ₹6–7 crore allocated for agricultural borewells.',
+      'At his Jana Spandana office, Basanagouda Badarli presided over the distribution of borewell equipment to local farmers. Over 155 borewells were sanctioned with ₹6–7 crore allocated for agricultural borewells.',
     content:
-      'At his Jana Spandana (People\'s Pulse) office in Sindhanur, Badarli presided over a ceremony distributing borewell equipment and materials to local farmers. Through his efforts and support of Minister N.S. Boseraju, over 155 borewells were sanctioned for SC/ST beneficiaries. An allocation of ₹6–7 crore was specifically earmarked for agricultural borewells in the Sindhanur constituency.',
+      'At his Jana Spandana (People\'s Pulse) office in Sindhanur, Basanagouda Badarli presided over a ceremony distributing borewell equipment and materials to local farmers. Through his efforts and support of Minister N.S. Boseraju, over 155 borewells were sanctioned for SC/ST beneficiaries. An allocation of ₹6–7 crore was specifically earmarked for agricultural borewells in the Sindhanur constituency.',
     isTicker: true,
   },
   {
@@ -71,9 +71,9 @@ export const newsItems: NewsItem[] = [
     date: 'February 2026',
     category: 'Agriculture',
     excerpt:
-      'In response to a starred question raised by Badarli in the Legislative Council, the government confirmed that installation of 33 new crest gates at Tungabhadra Dam will be completed by June 2026.',
+      'In response to a starred question raised by Basanagouda Badarli in the Legislative Council, the government confirmed that installation of 33 new crest gates at Tungabhadra Dam will be completed by June 2026.',
     content:
-      'In response to a starred question raised by Badarli in the Legislative Council, the government confirmed that the installation of 33 new crest gates at the Tungabhadra Dam is on track to be completed by June 2026. This is a major win for farmers in the Sindhanur and Raichur regions who rely on the dam for irrigation, ensuring water security for the upcoming monsoon season.',
+      'In response to a starred question raised by Basanagouda Badarli in the Legislative Council, the government confirmed that the installation of 33 new crest gates at the Tungabhadra Dam is on track to be completed by June 2026. This is a major win for farmers in the Sindhanur and Raichur regions who rely on the dam for irrigation, ensuring water security for the upcoming monsoon season.',
     isTicker: true,
   },
   {
@@ -82,9 +82,9 @@ export const newsItems: NewsItem[] = [
     date: 'April 2026',
     category: 'Education Policy',
     excerpt:
-      'Badarli remains a core member of the 11-member high-level committee to reintroduce campus politics in Karnataka after 37 years. The report submission is expected mid-April 2026.',
+      'Basanagouda Badarli remains a core member of the 11-member high-level committee to reintroduce campus politics in Karnataka after 37 years. The report submission is expected mid-April 2026.',
     content:
-      'Badarli remains a core member of the 11-member high-level committee tasked with reintroducing campus politics in Karnataka after a 37-year hiatus. The committee is in the final stages of drafting the framework to "tap young political talent" — a move strongly advocated by Badarli based on his roots in the Youth Congress. The report is expected to be submitted to the Chief Minister by mid-April 2026.',
+      'Basanagouda Badarli remains a core member of the 11-member high-level committee tasked with reintroducing campus politics in Karnataka after a 37-year hiatus. The committee is in the final stages of drafting the framework to "tap young political talent" — a move strongly advocated by Basanagouda Badarli based on his roots in the Youth Congress. The report is expected to be submitted to the Chief Minister by mid-April 2026.',
     isTicker: true,
   },
   {
@@ -93,9 +93,9 @@ export const newsItems: NewsItem[] = [
     date: 'February 9, 2026',
     category: 'Cultural',
     excerpt:
-      'Badarli played an active role in the three-day Raichur Zilla Utsav, highlighting the history, agriculture, and art of the Raichur district.',
+      'Basanagouda Badarli played an active role in the three-day Raichur Zilla Utsav, highlighting the history, agriculture, and art of the Raichur district.',
     content:
-      'Badarli played an active role in organizing and attending the three-day Raichur Zilla Utsav cultural festival. The event, supported by the district administration, highlighted the history, agriculture (paddy and cotton), and art of the Raichur district. The festival drew large crowds and celebrated the cultural richness of North Karnataka.',
+      'Basanagouda Badarli played an active role in organizing and attending the three-day Raichur Zilla Utsav cultural festival. The event, supported by the district administration, highlighted the history, agriculture (paddy and cotton), and art of the Raichur district. The festival drew large crowds and celebrated the cultural richness of North Karnataka.',
   },
   {
     id: '7',
@@ -103,9 +103,9 @@ export const newsItems: NewsItem[] = [
     date: 'January 2026',
     category: 'Healthcare',
     excerpt:
-      'Badarli successfully lobbied for a 50-bed critical care unit in the Sindhanur region, reducing the need for residents to travel to distant cities for emergency care.',
+      'Basanagouda Badarli successfully lobbied for a 50-bed critical care unit in the Sindhanur region, reducing the need for residents to travel to distant cities for emergency care.',
     content:
-      'Badarli successfully lobbied for a 50-bed critical care unit in the region to handle emergencies and trauma cases. This reduces the need for residents to travel to distant cities like Hubli or Bengaluru for critical care. He conducted site visits and progress reviews with district health officials in early 2026 to monitor the facility\'s development.',
+      'Basanagouda Badarli successfully lobbied for a 50-bed critical care unit in the region to handle emergencies and trauma cases. This reduces the need for residents to travel to distant cities like Hubli or Bengaluru for critical care. He conducted site visits and progress reviews with district health officials in early 2026 to monitor the facility\'s development.',
   },
 ];
 
