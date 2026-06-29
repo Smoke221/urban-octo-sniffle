@@ -17,7 +17,7 @@ export const events: Event[] = [
     location: 'Sindhanur, Raichur District',
     category: 'Social',
     description:
-      'Badarli organized the most ambitious mass marriage ceremony of his career — 5001 couples wed in a single day in Sindhanur, with Deputy Chief Minister D.K. Shivakumar attending as chief guest. Organized through the BB Foundation on the occasion of his 1-year anniversary as MLC, this landmark event provided a dignified and completely cost-free wedding to thousands of families from economically weaker sections across Kalyana Karnataka.',
+      'Basanagouda Badarli organized the most ambitious mass marriage ceremony of his career — 5001 couples wed in a single day in Sindhanur, with Deputy Chief Minister D.K. Shivakumar attending as chief guest. Organized through the BB Foundation on the occasion of his 1-year anniversary as MLC, this landmark event provided a dignified and completely cost-free wedding to thousands of families from economically weaker sections across Kalyana Karnataka.',
     status: 'past',
     highlight: true,
   },
@@ -28,7 +28,7 @@ export const events: Event[] = [
     location: 'Sindhanur, Raichur District',
     category: 'Education',
     description:
-      'Badarli was a key participant in the high-profile inauguration of the new Sainik School in Sindhanur. The event was attended by Union Minister H.D. Kumaraswamy, Union Minister of State for Defence Sanjay Seth, and other state leaders — marking a major milestone for defense-oriented education in North Karnataka.',
+      'Basanagouda Badarli was a key participant in the high-profile inauguration of the new Sainik School in Sindhanur. The event was attended by Union Minister H.D. Kumaraswamy, Union Minister of State for Defence Sanjay Seth, and other state leaders — marking a major milestone for defense-oriented education in North Karnataka.',
     status: 'past',
     highlight: true,
   },
@@ -39,7 +39,7 @@ export const events: Event[] = [
     location: 'Jana Spandana Office, Sindhanur',
     category: 'Agriculture',
     description:
-      'At his Jana Spandana (People\'s Pulse) office in Sindhanur, Badarli presided over a ceremony distributing borewell equipment and materials to local farmers. Over 155 borewells were sanctioned for SC/ST beneficiaries with an allocation of ₹6–7 crore specifically for agricultural borewells.',
+      'At his Jana Spandana (People\'s Pulse) office in Sindhanur, Basanagouda Badarli presided over a ceremony distributing borewell equipment and materials to local farmers. Over 155 borewells were sanctioned for SC/ST beneficiaries with an allocation of ₹6–7 crore specifically for agricultural borewells.',
     status: 'past',
     highlight: true,
   },
@@ -50,7 +50,7 @@ export const events: Event[] = [
     location: 'Raichur District',
     category: 'Cultural',
     description:
-      'Badarli played an active role in organizing and attending this three-day cultural festival. The event, supported by the district administration, highlighted the history, agriculture (paddy and cotton), and art of the Raichur district.',
+      'Basanagouda Badarli played an active role in organizing and attending this three-day cultural festival. The event, supported by the district administration, highlighted the history, agriculture (paddy and cotton), and art of the Raichur district.',
     status: 'past',
   },
   {
@@ -60,7 +60,7 @@ export const events: Event[] = [
     location: 'Bengaluru, Karnataka',
     category: 'Education Policy',
     description:
-      'Badarli participated in a series of high-level 11-member committee meetings to finalize the report on reviving student union elections in Karnataka after a 37-year hiatus. These sessions were critical in shaping the new framework for campus democracy.',
+      'Basanagouda Badarli participated in a series of high-level 11-member committee meetings to finalize the report on reviving student union elections in Karnataka after a 37-year hiatus. These sessions were critical in shaping the new framework for campus democracy.',
     status: 'past',
   },
   {
@@ -70,7 +70,7 @@ export const events: Event[] = [
     location: 'Raichur-Lingsugur Belt',
     category: 'Healthcare',
     description:
-      'Following his push for a 50-bed critical care center, Badarli conducted site visits and progress reviews with district health officials across the Raichur-Lingsugur belt to monitor healthcare infrastructure development.',
+      'Following his push for a 50-bed critical care center, Basanagouda Badarli conducted site visits and progress reviews with district health officials across the Raichur-Lingsugur belt to monitor healthcare infrastructure development.',
     status: 'past',
   },
   {
@@ -80,7 +80,7 @@ export const events: Event[] = [
     location: 'Town Hall, Sindhanur',
     category: 'Administration',
     description:
-      'Badarli chaired a preparatory meeting at the Town Hall in Sindhanur with the "Sindhanur District Struggle Committee." He informed the public that the State Revenue Minister has requested a feasibility report from the Regional Commissioner for making Sindhanur a separate district.',
+      'Basanagouda Badarli chaired a preparatory meeting at the Town Hall in Sindhanur with the "Sindhanur District Struggle Committee." He informed the public that the State Revenue Minister has requested a feasibility report from the Regional Commissioner for making Sindhanur a separate district.',
     status: 'past',
   },
   {
@@ -90,7 +90,7 @@ export const events: Event[] = [
     location: 'Bengaluru, Karnataka',
     category: 'Education Policy',
     description:
-      'Badarli participated in the formal submission of the Student Union Elections report to the Chief Minister as a member of the state-appointed panel. The report outlined the framework for reviving campus democracy in Karnataka after a 37-year hiatus.',
+      'Basanagouda Badarli participated in the formal submission of the Student Union Elections report to the Chief Minister as a member of the state-appointed panel. The report outlined the framework for reviving campus democracy in Karnataka after a 37-year hiatus.',
     status: 'past',
   },
   {
@@ -100,7 +100,7 @@ export const events: Event[] = [
     location: 'Sindhanur Region, Raichur District',
     category: 'Community',
     description:
-      'Badarli led a series of grassroots "Janaspandana" (people-connect) meetings across the Sindhanur region, furthering the demand for Sindhanur\'s recognition as a separate district for better administrative reach.',
+      'Basanagouda Badarli led a series of grassroots "Janaspandana" (people-connect) meetings across the Sindhanur region, furthering the demand for Sindhanur\'s recognition as a separate district for better administrative reach.',
     status: 'past',
   },
   {
@@ -110,7 +110,7 @@ export const events: Event[] = [
     location: 'Sindhanur & Manvi Taluks',
     category: 'Agriculture',
     description:
-      'Badarli is scheduled to meet with the Tungabhadra Board and irrigation department officials to ensure tail-end farmers of Sindhanur and Manvi taluks receive adequate water during the summer peak season.',
+      'Basanagouda Badarli is scheduled to meet with the Tungabhadra Board and irrigation department officials to ensure tail-end farmers of Sindhanur and Manvi taluks receive adequate water during the summer peak season.',
     status: 'upcoming',
     highlight: true,
   },
@@ -121,7 +121,7 @@ export const events: Event[] = [
     location: 'Vidhan Soudha, Bengaluru',
     category: 'Legislative',
     description:
-      'Badarli will be active in the upcoming sessions of the Karnataka Legislative Council, raising questions regarding the status of rural infrastructure development and teacher recruitment in the Kalyana-Karnataka region.',
+      'Basanagouda Badarli will be active in the upcoming sessions of the Karnataka Legislative Council, raising questions regarding the status of rural infrastructure development and teacher recruitment in the Kalyana-Karnataka region.',
     status: 'upcoming',
   },
   {
@@ -131,7 +131,7 @@ export const events: Event[] = [
     location: 'Raichur & Sindhanur Regions',
     category: 'Social',
     description:
-      'Badarli has championed Samuhika Madive (Mass Marriages) as a vital social service to reduce the financial burden on rural families. The BB Foundation has now conducted mass marriages for 51 couples (2023), 72 couples (2025), and a landmark 5001 couples on May 3, 2026 — with Deputy CM D.K. Shivakumar presiding.',
+      'Basanagouda Badarli has championed Samuhika Madive (Mass Marriages) as a vital social service to reduce the financial burden on rural families. The BB Foundation has now conducted mass marriages for 51 couples (2023), 72 couples (2025), and a landmark 5001 couples on May 3, 2026 — with Deputy CM D.K. Shivakumar presiding.',
     status: 'past',
   },
 ];

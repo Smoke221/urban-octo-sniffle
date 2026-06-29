@@ -97,7 +97,7 @@ export default function Home({
         from_phone: data.phone,
         district: data.district,
         message: '(No message provided)',
-        form_source: 'Homepage — Join Community',
+        form_source: 'Homepage — Join Us',
         reply_to: REPLY_TO_EMAIL,
       });
       setJoinSubmitted(true);
@@ -215,7 +215,7 @@ export default function Home({
                   onClick={handleJoinCommunityClick}
                   className="inline-flex items-center gap-2 bg-saffron hover:bg-saffron-dark text-white font-semibold font-poppins px-8 py-3.5 rounded-full transition-all hover:shadow-xl hover:-translate-y-0.5 text-base"
                 >
-                  Join Community <Users size={18} />
+                  Join Us <Users size={18} />
                 </button>
                 <button
                   type="button"
@@ -461,7 +461,7 @@ export default function Home({
                 tag="Events"
                 title="Events &"
                 titleHighlight="Engagements"
-                subtitle="Stay updated on Badarli's upcoming and recent events across Karnataka."
+                subtitle="Stay updated on Basanagouda Badarli's upcoming and recent events across Karnataka."
               />
             </FadeInSection>
 
@@ -749,7 +749,7 @@ export default function Home({
                       disabled={isJoinSubmitting}
                       className="w-full bg-saffron hover:bg-saffron-dark disabled:opacity-60 text-white font-semibold font-poppins py-3.5 rounded-xl transition-all hover:shadow-lg"
                     >
-                      {isJoinSubmitting ? 'Sending…' : 'Join Community'}
+                      {isJoinSubmitting ? 'Sending…' : 'Join Us'}
                     </button>
                     <p className="text-xs text-gray-400 font-inter text-center">
                       Your information will never be shared.
